@@ -1,0 +1,62 @@
+@use "sass:math";
+
+@property --root-font-size {
+  syntax: "<length>";
+  inherits: false;
+  initial-value: 16px;
+}
+
+// ローカルフォントのNoto sans JPを優先して使用するためのフォントファイルを読み込む
+@font-face {
+  font-family: "Local Noto Sans JP";
+  src: local("Noto Sans JP");
+}
+
+:root {
+  /* inner */
+  --inner: 956px;
+  --inner-wide: 1122px;
+  --padding-inner: 20px;
+  --padding-inner-pc: 242px;
+  --padding-inner-pc-wide: 159px;
+
+  /* z-index */
+  --z-index-header: 900;
+
+  /* color */
+  --color-white: #fff;
+  --color-text: #423232;
+  --color-black: #000;
+  --color-gray: #8F8F8F;
+  --color-border: #aaaaaf;
+  --color-primary: #1eafaa;
+  --color-hover: #24c4be;
+  --color-dark: #5b5555;
+  --color-header-bg: #E4DFDF;
+  --color-footer-bg: #D9D9D9;
+
+
+  /* font-weight */
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-bold: 700;
+
+  /* font-family */
+  --base-font-family: "Local Noto Sans JP", "Noto Sans JP", sans-serif;
+  --title-font-family: "Libre Baskerville", sans-serif;
+  --text-font-family: "Inter", sans-serif;
+  --mincho-font-family: "Shippori Mincho", serif;
+
+  // 16pxを基準として、1pxあたりのremを計算
+  --to-rem: calc(tan(atan2(1px, var(--root-font-size))) * 1rem);
+
+  // how to use
+  // font-size: calc(16 * var(--to-rem));
+
+  /* transition duration */
+  --duration: 0.3s;
+
+  /* header height */
+  --header-height: 72px;
+}

@@ -1,0 +1,134 @@
+@use "../global" as *;
+
+.p-footer {
+  background-color: var(--color-footer-bg);
+  padding-bottom: calc(34 * var(--to-rem));
+}
+
+.p-footer__inner {
+  padding-inline: var(--padding-inner);
+
+  @include mq("md") {
+    padding-inline-start: 27px;
+    padding-inline-end: 0;
+  }
+}
+
+/* ヘッダーと同じ構造：ロゴ（左）＋ ナビ（右） */
+.p-footer__main {
+  display: flex;
+  align-items: center;
+  height: calc(72 * var(--to-rem));
+}
+
+.p-footer__logo {
+  margin: 0;
+  flex-shrink: 0;
+  width: clamp(100px, 12cqi, 178px);
+}
+
+.p-footer__logo img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.p-footer__nav {
+  display: flex;
+  flex: 1;
+  align-items: stretch;
+  height: 100%;
+}
+
+.p-footer__nav-list {
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+}
+
+.p-footer__nav-item {
+  display: flex;
+  flex: 1;
+  align-items: stretch;
+}
+
+.p-footer__nav-item a {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-dark);
+  font-family: var(--text-font-family);
+  font-size: clamp(11px, 1.3cqi, 16px);
+  font-weight: var(--fw-medium);
+  white-space: nowrap;
+  transition: opacity var(--duration);
+}
+
+@media (any-hover: hover) {
+  .p-footer__nav-item a:hover {
+    opacity: 0.7;
+  }
+}
+
+/* 下段：コピーライト（左）＋ SNS（右） */
+.p-footer__bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.p-footer__copyright {
+  color: var(--color-dark);
+  font-size: calc(11 * var(--to-rem));
+}
+
+.p-footer__sns {
+  display: flex;
+  align-items: center;
+  gap: calc(8 * var(--to-rem));
+}
+
+.p-footer__sns-item a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity var(--duration);
+}
+
+@media (any-hover: hover) {
+  .p-footer__sns-item a:hover {
+    opacity: 0.7;
+  }
+}
+
+.p-footer__sns-item img {
+  width: calc(50 * var(--to-rem));
+  height: calc(50 * var(--to-rem));
+  object-fit: contain;
+}
+
+/* プライバシーポリシー */
+.p-footer__policy {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+}
+
+.p-footer__policy-link {
+  color: var(--color-gray);
+  font-size: calc(12 * var(--to-rem));
+  text-decoration: none;
+}
+
+@media (any-hover: hover) {
+  .p-footer__policy-link:hover {
+    text-decoration: underline;
+  }
+}
+
+.p-footer__policy-text {
+  color: var(--color-gray);
+  font-size: calc(12 * var(--to-rem));
+}

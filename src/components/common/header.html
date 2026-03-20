@@ -1,0 +1,66 @@
+<header class="p-header">
+  <div class="p-header__inner">
+    <p class="p-header__logo">
+      <a href="/">
+        <img src="/assets/images/logo.svg" alt="ペットライフプロムナード" width="178" height="72" />
+      </a>
+    </p>
+    <nav class="p-header__nav">
+      <ul class="p-header__nav-list">
+        <li class="p-header__nav-item{{#if (eq currentPage 'top')}} p-header__nav-item--current{{/if}}">
+          <a href="/">TOP</a>
+        </li>
+        <li class="p-header__nav-item{{#if (eq currentPage 'dogs')}} p-header__nav-item--current{{/if}}">
+          <a href="/dogs.html">ワンちゃん紹介</a>
+        </li>
+        <li class="p-header__nav-item{{#if (eq currentPage 'owner')}} p-header__nav-item--current{{/if}}">
+          <a href="/owner.html">店長コメント</a>
+        </li>
+        <li class="p-header__nav-item{{#if (eq currentPage 'news')}} p-header__nav-item--current{{/if}}">
+          <a href="/news.html">お知らせ</a>
+        </li>
+        <li class="p-header__nav-item{{#if (eq currentPage 'service')}} p-header__nav-item--current{{/if}}">
+          <a href="/service.html">サービス</a>
+        </li>
+        <li class="p-header__nav-item{{#if (eq currentPage 'voice')}} p-header__nav-item--current{{/if}}">
+          <a href="/voice.html">お客様の声</a>
+        </li>
+        <li class="p-header__nav-item p-header__nav-item--contact{{#if (eq currentPage 'contact')}} p-header__nav-item--current{{/if}}">
+          <a href="/contact.html">contact</a>
+        </li>
+      </ul>
+    </nav>
+    <button class="p-header__hamburger js-hamburger" aria-label="メニューを開く" aria-expanded="false" aria-controls="drawer-menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+  <div id="drawer-menu" class="p-header__drawer js-drawer" aria-hidden="true">
+    <nav class="p-header__drawer-nav">
+      <ul class="p-header__drawer-list">
+        <li class="p-header__drawer-item">
+          <a href="/">TOP</a>
+        </li>
+        <li class="p-header__drawer-item">
+          <a href="/dogs.html">ワンちゃん紹介</a>
+        </li>
+        <li class="p-header__drawer-item">
+          <a href="/owner.html">店長コメント</a>
+        </li>
+        <li class="p-header__drawer-item">
+          <a href="/news.html">お知らせ</a>
+        </li>
+        <li class="p-header__drawer-item">
+          <a href="/service.html">サービス</a>
+        </li>
+        <li class="p-header__drawer-item">
+          <a href="/voice.html">お客様の声</a>
+        </li>
+        <li class="p-header__drawer-item p-header__drawer-item--contact">
+          <a href="/contact.html">contact</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>

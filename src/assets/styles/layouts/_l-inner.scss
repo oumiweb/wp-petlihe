@@ -1,0 +1,19 @@
+@use "../global" as *;
+
+.l-inner {
+  max-width: 100%;
+  margin-inline: auto;
+  padding-inline: var(--padding-inner);
+
+  @include mq("md") {
+    max-width: calc(var(--inner) + var(--padding-inner-pc) * 2);
+    padding-inline: var(--padding-inner-pc);
+  }
+}
+
+.l-inner--wide {
+  @include mq("md") {
+    max-width: calc(var(--inner-wide) + var(--padding-inner-pc-wide) * 2);
+    padding-inline: var(--padding-inner-pc-wide);
+  }
+}

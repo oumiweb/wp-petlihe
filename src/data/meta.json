@@ -1,0 +1,52 @@
+{
+  "default": {
+    "title": "ペットライフプロムナード",
+    "description": "ペットライフプロムナードのWebサイトです。"
+  },
+  "/index.html": {
+    "title": "ペットライフプロムナード",
+    "description": "ペットライフプロムナードのWebサイトです。",
+    "currentPage": "top",
+    "welcomeImages": [
+      { "src": "/assets/images/top-card01.webp" },
+      { "src": "/assets/images/top-card02.webp" },
+      { "src": "/assets/images/top-card03.webp" },
+      { "src": "/assets/images/top-card01.webp" },
+      { "src": "/assets/images/top-card02.webp" },
+      { "src": "/assets/images/top-card03.webp" },
+      { "src": "/assets/images/top-card01.webp" },
+      { "src": "/assets/images/top-card02.webp" },
+      { "src": "/assets/images/top-card03.webp" }
+    ]
+  },
+  "/dogs.html": {
+    "title": "ワンちゃん紹介 | ペットライフプロムナード",
+    "description": "ワンちゃん紹介のページです。",
+    "currentPage": "dogs"
+  },
+  "/owner.html": {
+    "title": "店長コメント | ペットライフプロムナード",
+    "description": "店長コメントのページです。",
+    "currentPage": "owner"
+  },
+  "/news.html": {
+    "title": "お知らせ | ペットライフプロムナード",
+    "description": "お知らせのページです。",
+    "currentPage": "news"
+  },
+  "/service.html": {
+    "title": "サービス | ペットライフプロムナード",
+    "description": "サービスのページです。",
+    "currentPage": "service"
+  },
+  "/voice.html": {
+    "title": "お客様の声 | ペットライフプロムナード",
+    "description": "お客様の声のページです。",
+    "currentPage": "voice"
+  },
+  "/contact.html": {
+    "title": "contact | ペットライフプロムナード",
+    "description": "お問い合わせのページです。",
+    "currentPage": "contact"
+  }
+}
