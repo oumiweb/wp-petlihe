@@ -200,7 +200,7 @@
 
 .p-search__card-meta-row {
   display: flex;
-  gap: calc(12 * var(--to-rem));
+  gap: calc(60 * var(--to-rem));
   font-size: calc(16 * var(--to-rem));
 
   dt {
@@ -212,7 +212,6 @@
 
   dd {
     margin: 0;
-    margin-inline: auto;
     text-align: left;
   }
 }

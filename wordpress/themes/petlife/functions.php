@@ -27,6 +27,9 @@ get_template_part("functions-lib/func-url");
 // デフォルト投稿タイプのラベル変更
 get_template_part("functions-lib/func-add-posttype-post");
 
+// カスタム投稿タイプ（dogs: ワンちゃん紹介）
+get_template_part("functions-lib/func-cpt");
+
 // カスタム投稿タイプ（works 等）はプラグイン（CPT UI 等）で登録
 
 // 構造化データの設定（汎用化済み）
