@@ -1,0 +1,268 @@
+@use "../global" as *;
+
+.p-search {
+  padding-block-start: calc(60 * var(--to-rem));
+  padding-block-end: calc(80 * var(--to-rem));
+}
+
+.p-search__inner {
+  max-width: calc(var(--inner) + var(--padding-inner) * 2);
+  margin-inline: auto;
+  padding-inline: var(--padding-inner);
+  display: flex;
+  flex-direction: column;
+  gap: calc(40 * var(--to-rem));
+}
+
+// セクションタイトル（インナー幅の外）
+.p-search__heading {
+  max-width: calc(var(--inner-wider) + var(--padding-inner) * 2);
+  margin-inline: auto;
+  padding-inline: var(--padding-inner);
+  margin-block-end: calc(40 * var(--to-rem));
+
+  .c-section-title {
+    width: 100%;
+    justify-items: stretch;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .c-section-title__sub {
+    display: flex;
+    align-items: center;
+    gap: calc(12 * var(--to-rem));
+    white-space: nowrap;
+  }
+}
+
+// 検索見出し
+.p-search__search-heading {
+  display: flex;
+  flex-direction: column;
+  gap: calc(8 * var(--to-rem));
+}
+
+.p-search__search-title {
+  font-size: calc(40 * var(--to-rem));
+  color: var(--color-text);
+  font-family: var(--mincho-font-family);
+  font-weight: var(--fw-regular);
+}
+
+.p-search__search-note {
+  font-size: calc(16 * var(--to-rem));
+  color: var(--color-text);
+  font-family: var(--title-font-family);
+}
+
+// フィーチャードカード
+.p-search__featured {
+  display: grid;
+  grid-template-columns: calc(503px + 20px * 2) 1fr;
+  color: var(--color-white);
+  overflow: hidden;
+  background-image: linear-gradient(rgb(0 0 0 / 40%), rgb(0 0 0 / 40%)), url(/assets/images/bg.webp);
+}
+
+.p-search__featured-image {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+
+  img {
+    width: 503px;
+    height: 424px;
+    object-fit: cover;
+  }
+}
+
+.p-search__featured-body {
+  padding: calc(32 * var(--to-rem));
+  display: flex;
+  flex-direction: column;
+  gap: calc(16 * var(--to-rem));
+  justify-content: center;
+}
+
+.p-search__featured-name {
+  font-size: calc(64 * var(--to-rem));
+  font-weight: var(--fw-bold);
+  line-height: 1;
+  margin: 0;
+}
+
+.p-search__featured-meta {
+  display: flex;
+  flex-direction: column;
+  gap: calc(4 * var(--to-rem));
+  width: 100%;
+}
+
+.p-search__featured-meta-row {
+  display: flex;
+  align-items: center;
+  gap: calc(24 * var(--to-rem));
+  font-size: calc(14 * var(--to-rem));
+  padding-block: calc(8 * var(--to-rem));
+  border-block-end: 1px solid rgb(255 255 255 / 15%);
+
+  dt {
+    background-color: rgb(255 255 255 / 15%);
+    color: var(--color-white);
+    padding: calc(4 * var(--to-rem)) calc(10 * var(--to-rem));
+    min-width: 4em;
+    text-align: center;
+    font-size: calc(12 * var(--to-rem));
+  }
+
+  dd {
+    flex: 1;
+    margin: 0;
+    text-align: left;
+  }
+}
+
+.p-search__featured-info {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: calc(4 * var(--to-rem));
+  font-size: calc(13 * var(--to-rem));
+  color: oklch(from var(--color-white) l c h / 70%);
+}
+
+// ワンちゃんリスト
+.p-search__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: calc(97 * var(--to-rem));
+  list-style: none;
+  margin-top: calc(64 * var(--to-rem));
+  padding: 0;
+
+  @include mq("md"){ 
+    margin-top: calc(203 * var(--to-rem));
+  }
+}
+
+.p-search__item {
+  position: relative;
+}
+
+.p-search__card {
+  display: flex;
+  flex-direction: column;
+  gap: calc(12 * var(--to-rem));
+  width: 100%;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  padding: 0;
+}
+
+.p-search__card-image {
+  overflow: hidden;
+  border-radius: 50% 50% 0 0 / 60% 60% 0 0;
+  aspect-ratio: 1 / 1;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform calc(var(--duration) * 2);
+  }
+}
+
+@media (any-hover: hover) {
+  .p-search__card:hover .p-search__card-image img {
+    transform: scale(1.05);
+  }
+}
+
+.p-search__item.is-active .p-search__card-image {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.p-search__card-meta {
+  display: flex;
+  flex-direction: column;
+  gap: calc(4 * var(--to-rem));
+  margin: 0;
+  padding: 0;
+}
+
+.p-search__card-meta-row {
+  display: flex;
+  gap: calc(12 * var(--to-rem));
+  font-size: calc(16 * var(--to-rem));
+
+  dt {
+    color: var(--color-gray);
+    min-width: 2em;
+    background-color: var(--color-white);
+    padding: calc(2 * var(--to-rem))calc(10 * var(--to-rem));
+  }
+
+  dd {
+    margin: 0;
+    margin-inline: auto;
+    text-align: left;
+  }
+}
+
+.p-search__card-action {
+  margin-block-start: calc(4 * var(--to-rem));
+
+  .c-button {
+    width: 100%;
+    text-align: center;
+    padding-block: calc(4 * var(--to-rem));
+    padding-inline: 0;
+    font-size: calc(16 * var(--to-rem));
+  }
+}
+
+// COMING SOON
+.p-search__item--coming-soon .p-search__card {
+  cursor: default;
+  pointer-events: none;
+}
+
+.p-search__card-coming-soon {
+  position: absolute;
+  inset: 0;
+  border-radius: 50% 50% 0 0 / 60% 60% 0 0;
+  background-color: oklch(from var(--color-black) l c h / 60%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: calc(8 * var(--to-rem));
+  aspect-ratio: 1 / 1;
+}
+
+.p-search__card-coming-soon-logo img {
+  filter: brightness(0) invert(1);
+}
+
+.p-search__card-coming-soon-text {
+  color: var(--color-white);
+  font-family: var(--title-font-family);
+  font-size: calc(14 * var(--to-rem));
+  letter-spacing: 0.1em;
+  margin: 0;
+}
+
+// ページネーション
+.p-search__pagination {
+  display: flex;
+  justify-content: center;
+  margin-block-start: calc(16 * var(--to-rem));
+}

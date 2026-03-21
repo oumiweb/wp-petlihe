@@ -3,6 +3,8 @@ import "./_drawer.js";
 import "./_mv-slider.js";
 import "./_viewport.js";
 import "./_works-filter.js";
+import "./_deco-line.js";
+import "./_search.js";
 
 // 開発環境でのみCSSをインポート（JS経由でスタイルを注入）
 if (import.meta.env.DEV) {

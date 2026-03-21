@@ -84,7 +84,7 @@
   font-weight: var(--fw-medium);
   white-space: nowrap;
   transition: background-color var(--duration), color var(--duration);
-  font-family: var(--title-font-family);
+  font-family: var(--text-font-family);
 }
 
 @media (any-hover: hover) {

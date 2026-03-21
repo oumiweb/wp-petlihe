@@ -8,6 +8,9 @@ function add_vite_scripts()
 {
   $environment = get_asset_environment();
 
+  // Google Fonts（全環境で読み込み）
+  // Google Fontsはwp_enqueue_styleのURL sanitizationを回避するためwp_headで直接出力
+
   switch ($environment) {
     case "dev":
       enqueue_dev_assets();
@@ -21,9 +24,6 @@ function add_vite_scripts()
       enqueue_production_assets_fallback();
       break;
   }
-
-  // Google Fonts（開発環境以外で読み込み）
-  wp_enqueue_style("google-fonts", "https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Noto+Sans+JP:wght@100..900&family=Shippori+Mincho:wght@400;500;600;700;800&display=swap", [], false);
 }
 
 /**
@@ -165,17 +165,12 @@ function add_vite_module_attribute($tag, $handle, $src)
 add_filter("script_loader_tag", "add_vite_module_attribute", 10, 3);
 
 /**
- * Google Fonts最適化（プリコネクト）
+ * Google Fonts直接出力（wp_enqueue_styleのURL sanitizationを回避）
  */
-function add_font_preconnect($html, $handle)
+function output_google_fonts()
 {
-  if ("google-fonts" === $handle) {
-    $html = <<<EOT
-    <link rel='preconnect' href='https://fonts.googleapis.com'>
-    <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
-    $html
-    EOT;
-  }
-  return $html;
+  echo '<link rel="preconnect" href="https://fonts.googleapis.com">' . "\n";
+  echo '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>' . "\n";
+  echo '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Noto+Sans+JP:wght@300;400;500;700&family=Shippori+Mincho:wght@400;500;600;700;800&display=swap">' . "\n";
 }
-add_filter("style_loader_tag", "add_font_preconnect", 10, 2);
+add_action("wp_head", "output_google_fonts", 1);

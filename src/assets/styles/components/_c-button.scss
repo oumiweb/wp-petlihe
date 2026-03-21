@@ -58,3 +58,13 @@
     border-right: 2px solid currentcolor;
   }
 }
+
+.c-button[data-color="dark"] {
+  border-color: var(--color-dark);
+  background-color: var(--color-dark);
+  color: var(--color-white);
+}
+
+.c-button[data-shape="pill"] {
+  border-radius: 9999px;
+}

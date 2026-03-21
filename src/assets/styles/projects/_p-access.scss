@@ -1,0 +1,50 @@
+@use "../global" as *;
+
+.p-access {
+  padding-block: calc(60 * var(--to-rem));
+
+  @include mq("md") {
+    padding-block: calc(132 * var(--to-rem)) calc(195 * var(--to-rem));
+  }
+}
+
+.p-access__inner {
+  max-width: calc(936px + var(--padding-inner) * 2);
+  margin-inline: auto;
+  padding-inline: var(--padding-inner);
+}
+
+.p-access__heading {
+  margin-block-end: calc(32 * var(--to-rem));
+  text-align: center;
+}
+
+.p-access__title {
+  font-family: var(--title-font-family);
+  font-size: calc(36 * var(--to-rem));
+  font-weight: var(--fw-tegular);
+  color: var(--color-dark);
+  line-height: 1;
+
+  @include mq("md") {
+    font-size: calc(64 * var(--to-rem));
+  }
+}
+
+.p-access__subtitle {
+  font-family: var(--mincho-font-family);
+  margin-block-start: calc(8 * var(--to-rem));
+  font-size: calc(36 * var(--to-rem));
+  color: var(--color-dark);
+}
+
+.p-access__map {
+  margin-top: calc(32 * var(--to-rem));
+  width: 100%;
+  aspect-ratio: 936 / 506;
+}
+
+.p-access__map iframe {
+  width: 100%;
+  height: 100%;
+}

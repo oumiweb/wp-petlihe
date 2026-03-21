@@ -87,6 +87,7 @@
   display: flex;
   align-items: center;
   gap: calc(8 * var(--to-rem));
+  margin-right: calc(10 * var(--to-rem));
 }
 
 .p-footer__sns-item a {

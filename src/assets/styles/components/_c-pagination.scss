@@ -41,6 +41,7 @@
   background-color: var(--_pagination-bg);
   color: var(--_pagination-text);
   font-size: calc(14 * var(--to-rem));
+  border-radius: 50%;
   text-decoration: none;
   transition:
     background-color 0.2s ease,

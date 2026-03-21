@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="ja">
+  {{> head}}
+
+  <body>
+    {{> header}}
+
+    <main class="l-main">
+
+      <!-- ワンちゃん紹介 -->
+      <section class="p-search">
+
+          <!-- セクションタイトル -->
+          <div class="p-search__heading">
+            <div class="c-section-title" data-align="left">
+              <h2 class="c-section-title__main">SEARCH</h2>
+              <p class="c-section-title__sub">探す<span class="c-deco-line" aria-hidden="true"></span></p>
+            </div>
+          </div>
+
+        <div class="p-search__inner">
+          <!-- 検索見出し -->
+          <div class="p-search__search-heading">
+            <h3 class="p-search__search-title">ワンちゃんを探す</h3>
+            <p class="p-search__search-note">※価格については店頭スタッフにお尋ねください</p>
+          </div>
+
+          <!-- フィーチャードカード -->
+          <div class="p-search__featured" data-featured>
+            <div class="p-search__featured-image">
+              <img data-featured-img src="/assets/images/top-card01.webp" alt="" width="503" height="424" />
+            </div>
+            <div class="p-search__featured-body">
+              <dl class="p-search__featured-meta">
+                <div class="p-search__featured-meta-row">
+                  <dt>犬種</dt>
+                  <dd data-featured-breed>トイプードル</dd>
+                </div>
+                <div class="p-search__featured-meta-row">
+                  <dt>性別</dt>
+                  <dd data-featured-gender>オス</dd>
+                </div>
+              </dl>
+              <ul class="p-search__featured-info" data-featured-info>
+                <li>レッド</li>
+                <li>2026.5.11生まれ</li>
+                <li>水頭症公表</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- ワンちゃんリスト -->
+          <ul class="p-search__list">
+            <li class="p-search__item is-active">
+              <button class="p-search__card" type="button"
+                data-img="/assets/images/top-card01.webp"
+                data-breed="トイプードル"
+                data-gender="オス"
+                data-info="レッド,2026.5.11生まれ,水頭症公表">
+                <div class="p-search__card-image">
+                  <img src="/assets/images/top-card01.webp" alt="" width="359" height="290" loading="lazy" />
+                </div>
+                <dl class="p-search__card-meta">
+                  <div class="p-search__card-meta-row">
+                    <dt>犬種</dt>
+                    <dd>トイプードル</dd>
+                  </div>
+                  <div class="p-search__card-meta-row">
+                    <dt>性別</dt>
+                    <dd>オス</dd>
+                  </div>
+                </dl>
+                <div class="p-search__card-action">
+                  <span class="c-button" data-color="dark" data-shape="pill">詳細はこちら</span>
+                </div>
+              </button>
+            </li>
+            <li class="p-search__item">
+              <button class="p-search__card" type="button"
+                data-img="/assets/images/top-card02.webp"
+                data-breed="ポメラニアン"
+                data-gender="メス"
+                data-info="ホワイト,2026.3.20生まれ">
+                <div class="p-search__card-image">
+                  <img src="/assets/images/top-card02.webp" alt="" width="359" height="290" loading="lazy" />
+                </div>
+                <dl class="p-search__card-meta">
+                  <div class="p-search__card-meta-row">
+                    <dt>犬種</dt>
+                    <dd>ポメラニアン</dd>
+                  </div>
+                  <div class="p-search__card-meta-row">
+                    <dt>性別</dt>
+                    <dd>メス</dd>
+                  </div>
+                </dl>
+                <div class="p-search__card-action">
+                  <span class="c-button" data-color="dark" data-shape="pill">詳細はこちら</span>
+                </div>
+              </button>
+            </li>
+            <li class="p-search__item">
+              <button class="p-search__card" type="button"
+                data-img="/assets/images/top-card03.webp"
+                data-breed="マルチーズ"
+                data-gender="オス"
+                data-info="ホワイト,2026.4.5生まれ">
+                <div class="p-search__card-image">
+                  <img src="/assets/images/top-card03.webp" alt="" width="359" height="290" loading="lazy" />
+                </div>
+                <dl class="p-search__card-meta">
+                  <div class="p-search__card-meta-row">
+                    <dt>犬種</dt>
+                    <dd>マルチーズ</dd>
+                  </div>
+                  <div class="p-search__card-meta-row">
+                    <dt>性別</dt>
+                    <dd>オス</dd>
+                  </div>
+                </dl>
+                <div class="p-search__card-action">
+                  <span class="c-button" data-color="dark" data-shape="pill">詳細はこちら</span>
+                </div>
+              </button>
+            </li>
+            <li class="p-search__item">
+              <button class="p-search__card" type="button"
+                data-img="/assets/images/top-card01.webp"
+                data-breed="トイプードル"
+                data-gender="メス"
+                data-info="ブラック,2026.2.14生まれ">
+                <div class="p-search__card-image">
+                  <img src="/assets/images/top-card01.webp" alt="" width="359" height="290" loading="lazy" />
+                </div>
+                <dl class="p-search__card-meta">
+                  <div class="p-search__card-meta-row">
+                    <dt>犬種</dt>
+                    <dd>トイプードル</dd>
+                  </div>
+                  <div class="p-search__card-meta-row">
+                    <dt>性別</dt>
+                    <dd>メス</dd>
+                  </div>
+                </dl>
+                <div class="p-search__card-action">
+                  <span class="c-button" data-color="dark" data-shape="pill">詳細はこちら</span>
+                </div>
+              </button>
+            </li>
+            <li class="p-search__item">
+              <button class="p-search__card" type="button"
+                data-img="/assets/images/top-card02.webp"
+                data-breed="チワワ"
+                data-gender="オス"
+                data-info="ブラック＆タン,2026.1.30生まれ">
+                <div class="p-search__card-image">
+                  <img src="/assets/images/top-card02.webp" alt="" width="359" height="290" loading="lazy" />
+                </div>
+                <dl class="p-search__card-meta">
+                  <div class="p-search__card-meta-row">
+                    <dt>犬種</dt>
+                    <dd>チワワ</dd>
+                  </div>
+                  <div class="p-search__card-meta-row">
+                    <dt>性別</dt>
+                    <dd>オス</dd>
+                  </div>
+                </dl>
+                <div class="p-search__card-action">
+                  <span class="c-button" data-color="dark" data-shape="pill">詳細はこちら</span>
+                </div>
+              </button>
+            </li>
+            <li class="p-search__item">
+              <button class="p-search__card" type="button"
+                data-img="/assets/images/top-card02.webp"
+                data-breed="ここに犬種"
+                data-gender="ここに性別"
+                data-info="">
+                <div class="p-search__card-image">
+                  <img src="/assets/images/top-card02.webp" alt="" width="359" height="290" loading="lazy" />
+                </div>
+                <dl class="p-search__card-meta">
+                  <div class="p-search__card-meta-row">
+                    <dt>犬種</dt>
+                    <dd>ここに犬種</dd>
+                  </div>
+                  <div class="p-search__card-meta-row">
+                    <dt>性別</dt>
+                    <dd>ここに性別</dd>
+                  </div>
+                </dl>
+                <div class="p-search__card-action">
+                  <span class="c-button" data-color="dark" data-shape="pill">詳細はこちら</span>
+                </div>
+              </button>
+            </li>
+            <li class="p-search__item p-search__item--coming-soon">
+              <div class="p-search__card">
+                <div class="p-search__card-image">
+                  <img src="/assets/images/top-card03.webp" alt="" width="359" height="290" loading="lazy" />
+                </div>
+                <div class="p-search__card-coming-soon">
+                  <p class="p-search__card-coming-soon-logo">
+                    <img src="/assets/images/logo.svg" alt="PROMENADE" width="120" height="48" />
+                  </p>
+                  <p class="p-search__card-coming-soon-text">COMING SOON</p>
+                </div>
+              </div>
+            </li>
+          </ul>
+
+          <!-- ページネーション -->
+          <div class="p-search__pagination">
+            <nav class="c-pagination" aria-label="ページネーション">
+              <a href="#" class="c-pagination__item" data-state="prev" aria-label="前のページ">←</a>
+              <a href="#" class="c-pagination__item" data-state="current" aria-current="page">1</a>
+              <a href="#" class="c-pagination__item">2</a>
+              <a href="#" class="c-pagination__item" data-state="next" aria-label="次のページ">→</a>
+            </nav>
+          </div>
+
+        </div>
+      </section>
+
+    </main>
+
+    {{> footer}}
+
+    <script type="module" src="/assets/js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+@use "../global" as *;
+
+.c-deco-line {
+  display: block;
+  flex: 1;
+  max-width: 214px;
+  height: 8px;
+  background-image:
+    radial-gradient(circle 4px at 50% 50%, currentcolor 100%, transparent 100%),
+    linear-gradient(currentcolor, currentcolor);
+  background-size: 8px 8px, calc(100% - 8px) 1px;
+  background-position: right center, left center;
+  background-repeat: no-repeat;
+  clip-path: inset(0 100% 0 0);
+  transition: clip-path 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+
+  &.is-animated {
+    clip-path: inset(0 0% 0 0);
+  }
+}
+
+.c-deco-line--sm {
+  flex: none;
+  max-width: none;
+  width: 68px;
+}

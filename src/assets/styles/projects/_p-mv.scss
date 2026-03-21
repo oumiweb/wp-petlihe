@@ -1,23 +1,21 @@
 @use "../global" as *;
 
 .p-mv {
+  padding-block-start: calc(111 * var(--to-rem));
+}
+
+.p-mv__inner {
   position: relative;
   overflow: hidden;
+  max-width: calc(var(--inner-wider) + var(--padding-inner) * 2);
+  margin-inline: auto;
+  padding-inline: var(--padding-inner);
 }
 
-.p-mv__images {
-  display: flex;
-}
-
-.p-mv__image {
-  flex: 1;
-  aspect-ratio: 3 / 4;
-  overflow: hidden;
-}
-
-.p-mv__image img {
+.p-mv__video {
+  display: block;
   width: 100%;
-  height: 100%;
+  height: calc(710 * var(--to-rem));
   object-fit: cover;
 }
 
@@ -31,7 +29,7 @@
 
 .p-mv__logo {
   margin: 0;
-  width: clamp(200px, 40%, 400px);
+  width: clamp(200px, 40%, 397px);
 }
 
 .p-mv__logo img {

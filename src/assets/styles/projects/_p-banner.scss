@@ -1,0 +1,23 @@
+@use "../global" as *;
+
+.p-banner {
+  margin-block-start: calc(60 * var(--to-rem));
+
+  @include mq("md"){ 
+  margin-block-start: calc(214 * var(--to-rem));
+  }
+}
+
+.p-banner__inner {
+  max-width: calc(var(--inner-wider) + var(--padding-inner) * 2);
+  margin-inline: auto;
+  padding-inline: var(--padding-inner);
+}
+
+.p-banner__inner img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1200 / 427;
+  object-fit: cover;
+}

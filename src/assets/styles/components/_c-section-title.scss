@@ -27,28 +27,17 @@
   }
 }
 
-.c-section-title::after {
-  content: "";
-  display: block;
-  width: 60%;
-  height: calc(3 * var(--to-rem));
-  background-color: var(--color-orange);
-
-  @include mq(md) {
-    width: 80%;
-  }
-}
 
 .c-section-title__main {
   color: var(--color-text);
   font-family: var(--title-font-family);
   font-size: calc(32 * var(--to-rem));
-  font-weight: var(--fw-bold);
+  font-weight: var(--fw-regular);
   line-height: 1;
   text-transform: uppercase;
 
   @include mq(md) {
-    font-size: calc(48 * var(--to-rem));
+    font-size: calc(64 * var(--to-rem));
   }
 }
 
@@ -57,8 +46,9 @@
   font-size: calc(14 * var(--to-rem));
   font-weight: var(--fw-regular);
   line-height: 1.4;
+  font-family: var( --mincho-font-family);
 
   @include mq(md) {
-    font-size: calc(16 * var(--to-rem));
+    font-size: calc(24 * var(--to-rem));
   }
 }

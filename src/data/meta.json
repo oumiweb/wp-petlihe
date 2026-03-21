@@ -7,6 +7,13 @@
     "title": "ペットライフプロムナード",
     "description": "ペットライフプロムナードのWebサイトです。",
     "currentPage": "top",
+    "newsItems": [
+      { "url": "/news.html", "datetime": "2026-00-00", "date": "2026.00.00", "category": "イベント", "title": "ここにタイトルを書きます。" },
+      { "url": "/news.html", "datetime": "2026-00-00", "date": "2026.00.00", "category": "イベント", "title": "ここにタイトルを書きます。" },
+      { "url": "/news.html", "datetime": "2026-00-00", "date": "2026.00.00", "category": "イベント", "title": "ここにタイトルを書きます。" },
+      { "url": "/news.html", "datetime": "2026-00-00", "date": "2026.00.00", "category": "イベント", "title": "ここにタイトルを書きます。" },
+      { "url": "/news.html", "datetime": "2026-00-00", "date": "2026.00.00", "category": "イベント", "title": "ここにタイトルを書きます。" }
+    ],
     "welcomeImages": [
       { "src": "/assets/images/top-card01.webp" },
       { "src": "/assets/images/top-card02.webp" },
@@ -19,10 +26,10 @@
       { "src": "/assets/images/top-card03.webp" }
     ]
   },
-  "/dogs.html": {
+  "/search/index.html": {
     "title": "ワンちゃん紹介 | ペットライフプロムナード",
     "description": "ワンちゃん紹介のページです。",
-    "currentPage": "dogs"
+    "currentPage": "search"
   },
   "/owner.html": {
     "title": "店長コメント | ペットライフプロムナード",
