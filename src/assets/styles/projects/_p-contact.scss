@@ -1,14 +1,125 @@
 @use "../global" as *;
 
 .p-contact {
-  padding-block: calc(72 * var(--to-rem));
-}
-
-.p-contact__form {
-  margin-top: calc(64 * var(--to-rem));
+  padding-block: calc(72 * var(--to-rem)) calc(100 * var(--to-rem));
 }
 
 .p-contact__title {
+}
+
+.p-contact__form {
+  margin-block-start: calc(64 * var(--to-rem));
+}
+
+// ---- フォーム ----
+
+.p-contact-form {
+}
+
+.p-contact-form__row {
   display: grid;
-  place-items: center;
+  grid-template-columns: 1fr;
+  align-items: start;
+  gap: calc(8 * var(--to-rem));
+  padding-block: calc(20 * var(--to-rem));
+  border-block-start: 1px solid #e0e0e0;
+
+  &:last-of-type {
+    border-block-end: 1px solid #e0e0e0;
+  }
+
+  @include mq("md") {
+    grid-template-columns: calc(200 * var(--to-rem)) 1fr;
+    gap: calc(16 * var(--to-rem));
+  }
+}
+
+.p-contact-form__label-wrap {
+  display: flex;
+  align-items: center;
+  gap: calc(12 * var(--to-rem));
+  padding-block-start: calc(10 * var(--to-rem));
+}
+
+.p-contact-form__badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: calc(2 * var(--to-rem)) calc(8 * var(--to-rem));
+  background-color: var(--color-primary);
+  color: #fff;
+  font-size: calc(11 * var(--to-rem));
+  font-weight: var(--fw-bold);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.p-contact-form__label {
+  font-size: calc(14 * var(--to-rem));
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+.p-contact-form__input,
+.p-contact-form__textarea {
+  display: block;
+  width: 100%;
+  padding: calc(10 * var(--to-rem)) calc(12 * var(--to-rem));
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 2px;
+  font-size: calc(14 * var(--to-rem));
+  color: var(--color-text);
+  font-family: var(--base-font-family);
+  appearance: none;
+
+  &:focus {
+    outline: 2px solid var(--color-primary);
+    outline-offset: -2px;
+    background-color: #fff;
+  }
+}
+
+.p-contact-form__textarea {
+  min-height: calc(160 * var(--to-rem));
+  resize: vertical;
+}
+
+.p-contact-form__submit {
+  margin-block-start: calc(48 * var(--to-rem));
+  text-align: center;
+}
+
+// ---- CF7 上書き ----
+
+.wpcf7-form {
+  .p-contact-form__field {
+    .wpcf7-form-control {
+      display: block;
+      width: 100%;
+      padding: calc(10 * var(--to-rem)) calc(12 * var(--to-rem));
+      background-color: #f5f5f5;
+      border: 1px solid #ddd;
+      border-radius: 2px;
+      font-size: calc(14 * var(--to-rem));
+      color: var(--color-text);
+      font-family: var(--base-font-family);
+      appearance: none;
+
+      &:focus {
+        outline: 2px solid var(--color-primary);
+        outline-offset: -2px;
+        background-color: #fff;
+      }
+
+      &.wpcf7-textarea {
+        min-height: calc(160 * var(--to-rem));
+        resize: vertical;
+      }
+    }
+  }
+
+  .wpcf7-submit {
+    cursor: pointer;
+  }
 }

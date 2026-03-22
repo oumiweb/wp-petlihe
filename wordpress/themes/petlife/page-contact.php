@@ -10,15 +10,54 @@ get_header(); ?>
         <?php get_template_part("template-parts/section-title", null, [
           "main" => "CONTACT",
           "sub" => "お問い合わせ",
-          "align" => "center",
+          "align" => "left",
           "tag" => "h2",
         ]); ?>
       </div>
+      <?php
+      /*
+       * CF7フォームエディタに以下を貼り付けてください：
+       *
+       * <div class="p-contact-form__row">
+       *   <div class="p-contact-form__label-wrap">
+       *     <span class="p-contact-form__badge">必須</span>
+       *     <label class="p-contact-form__label">氏名</label>
+       *   </div>
+       *   <div class="p-contact-form__field">[text* your-name]</div>
+       * </div>
+       * <div class="p-contact-form__row">
+       *   <div class="p-contact-form__label-wrap">
+       *     <span class="p-contact-form__badge">必須</span>
+       *     <label class="p-contact-form__label">お問い合わせ種別</label>
+       *   </div>
+       *   <div class="p-contact-form__field">[text* your-type]</div>
+       * </div>
+       * <div class="p-contact-form__row">
+       *   <div class="p-contact-form__label-wrap">
+       *     <span class="p-contact-form__badge">必須</span>
+       *     <label class="p-contact-form__label">お問い合わせ内容</label>
+       *   </div>
+       *   <div class="p-contact-form__field">[textarea* your-message]</div>
+       * </div>
+       * <div class="p-contact-form__row">
+       *   <div class="p-contact-form__label-wrap">
+       *     <span class="p-contact-form__badge">必須</span>
+       *     <label class="p-contact-form__label">メールアドレス</label>
+       *   </div>
+       *   <div class="p-contact-form__field">[email* your-email]</div>
+       * </div>
+       * <div class="p-contact-form__row">
+       *   <div class="p-contact-form__label-wrap">
+       *     <span class="p-contact-form__badge">必須</span>
+       *     <label class="p-contact-form__label">電話番号</label>
+       *   </div>
+       *   <div class="p-contact-form__field">[tel* your-tel]</div>
+       * </div>
+       * <div class="p-contact-form__submit">[submit "送信する"]</div>
+       */
+      ?>
       <div class="p-contact__form">
-        <?php // 販売後特典SQL（投稿ページ＋CF7フォーム設定）をインポートすると、このIDのフォームが表示されます。
-
-// 特典SQLを入れていない場合はフォーム未設定（CF7のメッセージや空欄）になります。
-        echo do_shortcode('[contact-form-7 id="c86f2bc" title="Contact form 1"]'); ?>
+        <?php echo do_shortcode('[contact-form-7 id="c86f2bc" title="Contact form 1"]'); ?>
       </div>
     </div>
   </section>

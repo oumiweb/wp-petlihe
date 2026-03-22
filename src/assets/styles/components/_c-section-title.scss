@@ -3,9 +3,9 @@
 .c-section-title {
   display: grid;
   gap: calc(8 * var(--to-rem));
-  justify-items: center;
-  width: max-content;
-  text-align: center;
+  justify-items: start;
+  width: 100%;
+  text-align: left;
 
   @include mq(md) {
     gap: calc(12 * var(--to-rem));
@@ -14,7 +14,6 @@
   &[data-align="center"] {
     justify-items: center;
     text-align: center;
-    margin-inline: auto;
   }
 
   &[data-align="left"] {

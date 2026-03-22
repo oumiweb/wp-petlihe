@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="ja">
+  {{> head}}
+
+  <body>
+    {{> header}}
+
+    <main class="l-main">
+      <section class="p-contact">
+        <div class="p-contact__inner l-inner">
+
+          <div class="p-contact__title">
+            <div class="c-section-title" data-align="left">
+              <h1 class="c-section-title__main">CONTACT</h1>
+              <p class="c-section-title__sub">お問い合わせ<span class="c-deco-line" aria-hidden="true"></span></p>
+            </div>
+          </div>
+
+          <div class="p-contact__form">
+            <form class="p-contact-form" action="#" method="post">
+
+              <div class="p-contact-form__row">
+                <div class="p-contact-form__label-wrap">
+                  <span class="p-contact-form__badge">必須</span>
+                  <label class="p-contact-form__label" for="name">氏名</label>
+                </div>
+                <div class="p-contact-form__field">
+                  <input class="p-contact-form__input" type="text" id="name" name="name" />
+                </div>
+              </div>
+
+              <div class="p-contact-form__row">
+                <div class="p-contact-form__label-wrap">
+                  <span class="p-contact-form__badge">必須</span>
+                  <label class="p-contact-form__label" for="type">お問い合わせ種別</label>
+                </div>
+                <div class="p-contact-form__field">
+                  <input class="p-contact-form__input" type="text" id="type" name="type" />
+                </div>
+              </div>
+
+              <div class="p-contact-form__row">
+                <div class="p-contact-form__label-wrap">
+                  <span class="p-contact-form__badge">必須</span>
+                  <label class="p-contact-form__label" for="message">お問い合わせ内容</label>
+                </div>
+                <div class="p-contact-form__field">
+                  <textarea class="p-contact-form__textarea" id="message" name="message"></textarea>
+                </div>
+              </div>
+
+              <div class="p-contact-form__row">
+                <div class="p-contact-form__label-wrap">
+                  <span class="p-contact-form__badge">必須</span>
+                  <label class="p-contact-form__label" for="email">メールアドレス</label>
+                </div>
+                <div class="p-contact-form__field">
+                  <input class="p-contact-form__input" type="email" id="email" name="email" />
+                </div>
+              </div>
+
+              <div class="p-contact-form__row">
+                <div class="p-contact-form__label-wrap">
+                  <span class="p-contact-form__badge">必須</span>
+                  <label class="p-contact-form__label" for="tel">電話番号</label>
+                </div>
+                <div class="p-contact-form__field">
+                  <input class="p-contact-form__input" type="tel" id="tel" name="tel" />
+                </div>
+              </div>
+
+              <div class="p-contact-form__submit">
+                <button type="submit" class="c-button" data-color="primary">送信する</button>
+              </div>
+
+            </form>
+          </div>
+
+        </div>
+      </section>
+    </main>
+
+    {{> footer}}
+
+    <script type="module" src="/assets/js/script.js"></script>
+  </body>
+</html>

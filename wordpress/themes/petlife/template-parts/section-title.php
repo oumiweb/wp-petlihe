@@ -24,5 +24,5 @@ $heading_close = "</{$tag}>";
 ?>
 <hgroup class="c-section-title" data-align="<?php echo esc_attr($align); ?>">
   <?php echo $heading_open . esc_html($main) . $heading_close; ?>
-  <p class="c-section-title__sub"><?php echo esc_html($sub); ?></p>
+  <p class="c-section-title__sub"><?php echo esc_html($sub); ?><span class="c-deco-line" aria-hidden="true"></span></p>
 </hgroup>

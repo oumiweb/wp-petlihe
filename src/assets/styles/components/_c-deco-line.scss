@@ -2,8 +2,8 @@
 
 .c-deco-line {
   display: block;
-  flex: 1;
-  max-width: 214px;
+  flex-shrink: 0;
+  width: 214px;
   height: 8px;
   background-image:
     radial-gradient(circle 4px at 50% 50%, currentcolor 100%, transparent 100%),
