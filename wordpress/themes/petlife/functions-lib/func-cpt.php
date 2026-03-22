@@ -32,14 +32,3 @@ function petlife_register_cpt_dogs()
 }
 add_action('init', 'petlife_register_cpt_dogs');
 
-/**
- * dogs の個別URLにアクセスされたらアーカイブにリダイレクト
- */
-function petlife_redirect_dogs_single()
-{
-  if (is_singular('dogs')) {
-    wp_redirect(get_post_type_archive_link('dogs'), 301);
-    exit;
-  }
-}
-add_action('template_redirect', 'petlife_redirect_dogs_single');

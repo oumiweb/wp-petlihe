@@ -19,6 +19,50 @@
   margin-block-end: 0;
 }
 
+// MV
+.p-news-list__mv {
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.p-news-list__mv-figure {
+  margin: 0;
+  width: 100%;
+  aspect-ratio: 1122 / 529;
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.p-news-list__mv-label {
+  position: absolute;
+  bottom: calc(24 * var(--to-rem));
+  left: calc(24 * var(--to-rem));
+  color: var(--color-white);
+  font-size: calc(16 * var(--to-rem));
+  font-family: var(--mincho-font-family);
+
+  @include mq("md") {
+    bottom: calc(40 * var(--to-rem));
+    left: calc(40 * var(--to-rem));
+    font-size: calc(20 * var(--to-rem));
+  }
+}
+
+// バナー
+.p-news-list__banner {
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+
 // カードコンテナ
 .p-news-list__container {
   display: flex;

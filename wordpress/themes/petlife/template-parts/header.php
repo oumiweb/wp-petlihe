@@ -13,8 +13,8 @@
         <li class="p-header__nav-item<?php echo is_page('dogs') ? ' p-header__nav-item--current' : ''; ?>">
           <a href="<?php page_path("dogs"); ?>">ワンちゃん紹介</a>
         </li>
-        <li class="p-header__nav-item<?php echo is_page('owner') ? ' p-header__nav-item--current' : ''; ?>">
-          <a href="<?php page_path("owner"); ?>">店長コメント</a>
+        <li class="p-header__nav-item<?php echo is_page('message') ? ' p-header__nav-item--current' : ''; ?>">
+          <a href="<?php page_path("message"); ?>">店長コメント</a>
         </li>
         <li class="p-header__nav-item<?php echo is_page('news') ? ' p-header__nav-item--current' : ''; ?>">
           <a href="<?php page_path("news"); ?>">お知らせ</a>
@@ -46,7 +46,7 @@
           <a href="<?php page_path("dogs"); ?>">ワンちゃん紹介</a>
         </li>
         <li class="p-header__drawer-item">
-          <a href="<?php page_path("owner"); ?>">店長コメント</a>
+          <a href="<?php page_path("message"); ?>">店長コメント</a>
         </li>
         <li class="p-header__drawer-item">
           <a href="<?php page_path("news"); ?>">お知らせ</a>

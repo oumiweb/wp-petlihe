@@ -6,7 +6,7 @@
 ?>
 <main class="l-main">
   <section class="p-news-list">
-    <div class="p-news-list__inner l-inner">
+    <div class="p-news-list__inner l-inner l-inner--wide">
       <div class="p-news-list__title">
         <?php get_template_part("template-parts/section-title", null, [
           "main" => "NEWS",

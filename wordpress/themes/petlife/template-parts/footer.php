@@ -11,7 +11,7 @@
         <ul class="p-footer__nav-list">
           <li class="p-footer__nav-item"><a href="<?php echo esc_url(home_url("/")); ?>">TOP</a></li>
           <li class="p-footer__nav-item"><a href="<?php page_path("dogs"); ?>">ワンちゃん紹介</a></li>
-          <li class="p-footer__nav-item"><a href="<?php page_path("owner"); ?>">店長コメント</a></li>
+          <li class="p-footer__nav-item"><a href="<?php page_path("message"); ?>">店長コメント</a></li>
           <li class="p-footer__nav-item"><a href="<?php page_path("news"); ?>">お知らせ</a></li>
           <li class="p-footer__nav-item"><a href="<?php page_path("service"); ?>">サービス</a></li>
           <li class="p-footer__nav-item"><a href="<?php page_path("voice"); ?>">お客様の声</a></li>

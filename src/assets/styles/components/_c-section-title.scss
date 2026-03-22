@@ -14,6 +14,7 @@
   &[data-align="center"] {
     justify-items: center;
     text-align: center;
+    margin-inline: auto;
   }
 
   &[data-align="left"] {
@@ -42,6 +43,9 @@
 }
 
 .c-section-title__sub {
+  display: flex;
+  align-items: center;
+  gap: calc(12 * var(--to-rem));
   color: var(--color-text);
   font-size: calc(14 * var(--to-rem));
   font-weight: var(--fw-regular);

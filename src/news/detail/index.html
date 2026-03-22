@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="ja">
+  {{> head}}
+
+  <body>
+    {{> header}}
+
+    <main class="l-main">
+
+      <section class="p-news-list">
+        <div class="p-news-list__inner l-inner l-inner--wide">
+
+          <!-- セクションタイトル -->
+          <div class="p-news-list__title">
+            <div class="c-section-title" data-align="left">
+              <h1 class="c-section-title__main">NEWS</h1>
+              <p class="c-section-title__sub">ニュース<span class="c-deco-line" aria-hidden="true"></span></p>
+            </div>
+          </div>
+
+          <!-- MV -->
+          <div class="p-news-list__mv">
+            <figure class="p-news-list__mv-figure">
+              <img src="/assets/images/news-mv.webp" alt="" width="1122" height="500" />
+            </figure>
+            <p class="p-news-list__mv-label">ニュース</p>
+          </div>
+
+          <!-- バナー -->
+          <div class="p-news-list__banner">
+            <img src="/assets/images/news-banner.webp" alt="毎月11日 ワンワンデー 会員カードは10%オフ 生体買った人は無料配布" width="1122" height="160" loading="lazy" />
+          </div>
+
+          <!-- 記事 -->
+          <article class="p-single p-single--post">
+            <div class="p-single__inner">
+
+              <header class="p-single__header">
+                <div class="p-single__meta">
+                  <time class="p-single__date" datetime="2026-03-20">2026年03月20日</time>
+                  <div class="p-single__categories">
+                    <a href="#" class="p-single__category">お知らせ</a>
+                  </div>
+                </div>
+                <h2 class="p-single__title">新しいワンちゃんが入荷しました</h2>
+              </header>
+
+              <div class="p-single__thumbnail">
+                <img src="/assets/images/top-card01.webp" alt="" width="960" height="540" loading="lazy" />
+              </div>
+
+              <div class="p-single__content">
+                <p>トイプードルをはじめ、今週も可愛いワンちゃんたちが仲間入りしました。それぞれの個性を大切に、新しい家族との出会いをお手伝いします。</p>
+                <p>ぜひ店頭でご覧ください。スタッフ一同、皆様のご来店をお待ちしております。</p>
+              </div>
+
+            </div>
+
+            <!-- 前後の記事ナビゲーション -->
+            <nav class="p-single__navigation c-pagination" aria-label="投稿ナビゲーション">
+              <a href="#" class="c-pagination__item" data-state="prev" aria-label="前のニュース">←</a>
+              <a href="#" class="c-pagination__item" data-state="next" aria-label="次のニュース">→</a>
+            </nav>
+
+          </article>
+
+        </div>
+      </section>
+
+    </main>
+
+    {{> footer}}
+
+    <script type="module" src="/assets/js/script.js"></script>
+  </body>
+</html>

@@ -25,6 +25,10 @@ if (featured) {
       if (gender) featuredGender.textContent = gender;
 
       featuredInfo.innerHTML = info.map((i) => `<li>${i}</li>`).join("");
+
+      const offset = 80;
+      const top = featured.getBoundingClientRect().top + window.scrollY - offset;
+      window.scrollTo({ top, behavior: "smooth" });
     });
   });
 }

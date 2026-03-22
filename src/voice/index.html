@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ja">
+  {{> head}}
+
+  <body>
+    {{> header}}
+
+    <main class="l-main">
+
+      <!-- MV -->
+      <div class="p-voice-mv">
+        <div class="p-voice-mv__heading">
+          <div class="c-section-title" data-align="left">
+            <h1 class="c-section-title__main">VOICE</h1>
+            <p class="c-section-title__sub">お客様の声<span class="c-deco-line" aria-hidden="true"></span></p>
+          </div>
+        </div>
+        <div class="p-voice-mv__inner">
+          <figure class="p-voice-mv__figure">
+            <img src="/assets/images/voice-mv.webp" alt="" width="1264" height="710" />
+          </figure>
+        </div>
+      </div>
+
+      <!-- カード一覧 -->
+      <section class="p-voice-list">
+        <div class="p-voice-list__inner l-inner">
+          <div class="p-voice-list__grid">
+
+            <article class="p-voice-card">
+              <div class="p-voice-card__avatar">
+                <img src="/assets/images/voice-card01.webp" alt="S様" width="120" height="120" loading="lazy" />
+              </div>
+              <div class="p-voice-card__body">
+                <p class="p-voice-card__name">S様<span class="p-voice-card__breed"> | トイプードル</span></p>
+                <hr class="p-voice-card__divider" />
+                <p class="p-voice-card__text">おもちのトリミングはいつもプロムナードさんにお願いしています。他のサロンでは嫌がっていたおもちが、ここでは大人しくしているのが不思議でした。スタッフさんの技術はもちろん、わんちゃんへの接し方がとても優しくて安心です。仕上がりもいつも可愛くて、毎回お迎えが楽しみです。</p>
+              </div>
+            </article>
+
+            <article class="p-voice-card">
+              <div class="p-voice-card__avatar">
+                <img src="/assets/images/voice-card02.webp" alt="M様" width="120" height="120" loading="lazy" />
+              </div>
+              <div class="p-voice-card__body">
+                <p class="p-voice-card__name">M様<span class="p-voice-card__breed"> | トイプードル</span></p>
+                <hr class="p-voice-card__divider" />
+                <p class="p-voice-card__text">プロムナードさんでショコラと出会えて本当に良かったです。スタッフの方が一頭一頭の性格や特徴を丁寧に教えてくださり、安心してお迎えすることができました。お迎え後のフォローも手厚く、初めての犬育てでも心強かったです。ショコラは今では家族の中心で、毎日たくさんの笑顔をくれています。</p>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    {{> footer}}
+
+    <script type="module" src="/assets/js/script.js"></script>
+  </body>
+</html>
