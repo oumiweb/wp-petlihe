@@ -23,7 +23,6 @@
     <div class="p-welcome__action">
       <a href="<?php page_path('dogs'); ?>" class="c-button" data-color="primary">その他のワンちゃんはこちら</a>
     </div>
-    <p class="p-welcom__notes">国内のグッズ取り扱っています。ニュートロ、ロイヤルカナンなども取り扱いあり
-    </p>
+    <p class="p-welcom__notes">ワンちゃんのことを詳しく知りたい方は、お電話ください。<span data-only-device="md"><br></span>国内のグッズ取り扱っています。ニュートロ、ロイヤルカナンなども取り扱いございます。</p>
   </div>
 </section>

@@ -1,20 +1,14 @@
 @use "../global" as *;
 
-.p-voice-mv {
+.p-voice-mv__body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: calc(24 * var(--to-rem));
-  height: 100dvh;
-  padding-inline: var(--padding-inner);
+  gap: calc(125 * var(--to-rem));
 
   @include mq("md") {
     gap: calc(32 * var(--to-rem));
-    padding-inline: var(--padding-inner-pc-wide);
   }
-}
-
-.p-voice-mv__heading {
 }
 
 .p-voice-mv__inner {
@@ -49,6 +43,7 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: calc(24 * var(--to-rem));
+  margin-inline: calc(108 * var(--to-rem));
 
   @include mq("md") {
     grid-template-columns: repeat(2, 1fr);

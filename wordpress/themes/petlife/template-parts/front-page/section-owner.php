@@ -9,21 +9,17 @@
       <h2 class="p-owner__title">家族が見つかったワンちゃん</h2>
     </div>
     <ul class="p-owner__list">
-      <li class="p-owner__item">
-        <div class="p-owner__image">
-          <img src="<?php echo esc_url(get_theme_file_uri("/assets/images/top-card01.webp")); ?>" alt="" width="359" height="290" loading="lazy" />
-        </div>
-      </li>
-      <li class="p-owner__item">
-        <div class="p-owner__image">
-          <img src="<?php echo esc_url(get_theme_file_uri("/assets/images/top-card02.webp")); ?>" alt="" width="359" height="290" loading="lazy" />
-        </div>
-      </li>
-      <li class="p-owner__item">
-        <div class="p-owner__image">
-          <img src="<?php echo esc_url(get_theme_file_uri("/assets/images/top-card03.webp")); ?>" alt="" width="359" height="290" loading="lazy" />
-        </div>
-      </li>
+      <?php for ($i = 1; $i <= 3; $i++) : ?>
+        <?php $image = get_field('owner_image_' . $i); ?>
+        <?php if ($image) : ?>
+          <li class="p-owner__item">
+            <div class="p-owner__image">
+              <span class="p-owner__sold">SOLD</span>
+              <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" width="359" height="291" loading="lazy" />
+            </div>
+          </li>
+        <?php endif; ?>
+      <?php endfor; ?>
     </ul>
     <div class="p-owner__action">
       <a href="<?php page_path('dogs'); ?>" class="c-button" data-color="primary">その他のワンちゃんはこちら</a>

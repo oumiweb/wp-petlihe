@@ -1,20 +1,14 @@
 @use "../global" as *;
 
-.p-service-mv {
+.p-service-mv__body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: calc(24 * var(--to-rem));
-  height: 100dvh;
-  padding-inline: var(--padding-inner);
+  gap: calc(64 * var(--to-rem));
 
   @include mq("md") {
-    gap: calc(32 * var(--to-rem));
-    padding-inline: var(--padding-inner-pc-wide);
+    gap: calc(126 * var(--to-rem));
   }
-}
-
-.p-service-mv__heading {
 }
 
 .p-service-mv__inner {
@@ -36,10 +30,10 @@
 }
 
 .p-service-page {
-  padding-block: calc(60 * var(--to-rem)) calc(80 * var(--to-rem));
+  padding-block: calc(32 * var(--to-rem)) calc(80 * var(--to-rem));
 
   @include mq("md") {
-    padding-block: calc(80 * var(--to-rem)) calc(120 * var(--to-rem));
+    padding-block: calc(66 * var(--to-rem)) calc(120 * var(--to-rem));
   }
 }
 
@@ -63,6 +57,25 @@
 
   p {
     margin: 0;
+  }
+}
+
+.p-service-page__pricelist-notes {
+  list-style: none;
+  margin: calc(16 * var(--to-rem)) 0 0;
+  padding: 0;
+  text-align: center;
+
+  li {
+    font-size: calc(11 * var(--to-rem));
+    color: var(--color-text);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    line-height: 2;
+
+    @include mq("md") {
+      font-size: calc(12 * var(--to-rem));
+    }
   }
 }
 
@@ -236,10 +249,54 @@
   @include mq("md") {
     margin-block-start: calc(80 * var(--to-rem));
   }
+}
 
-  img {
-    display: block;
-    width: 100%;
-    height: auto;
+.p-service-page__pricelist-title {
+  font-size: calc(18 * var(--to-rem));
+  font-weight: var(--fw-regular);
+  font-family: var(--title-font-family);
+  text-align: center;
+  color: var(--color-text);
+  margin-block-end: calc(24 * var(--to-rem));
+
+  @include mq("md") {
+    font-size: calc(22 * var(--to-rem));
+  }
+}
+
+.p-service-page__pricelist-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: calc(12 * var(--to-rem));
+  color: var(--color-text);
+
+  @include mq("md") {
+    font-size: calc(14 * var(--to-rem));
+  }
+
+  thead tr {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+  }
+
+  th {
+    padding: calc(12 * var(--to-rem)) calc(16 * var(--to-rem));
+    font-weight: var(--fw-regular);
+    text-align: center;
+    border: 1px solid var(--color-primary);
+  }
+
+  td {
+    padding: calc(10 * var(--to-rem)) calc(16 * var(--to-rem));
+    text-align: center;
+    border-block-end: 1px solid oklch(from var(--color-black) l c h / 10%);
+  }
+
+  td:first-child {
+    border-inline-end: 1px solid oklch(from var(--color-black) l c h / 10%);
+  }
+
+  tbody tr:last-child td {
+    border-block-end: none;
   }
 }

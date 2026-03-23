@@ -8,30 +8,34 @@ get_header(); ?>
 
   <!-- MV -->
   <div class="p-message-mv">
-    <div class="p-message-mv__heading">
-      <?php get_template_part("template-parts/section-title", null, [
-        "main"  => "MESSAGE",
-        "sub"   => "メッセージ",
-        "align" => "left",
-        "tag"   => "h1",
-      ]); ?>
-    </div>
-    <div class="p-message-mv__inner">
-      <figure class="p-message-mv__figure">
-        <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/message-mv.webp')); ?>" alt="" width="1264" height="710" />
-      </figure>
-      <div class="p-message-mv__text">
-        <p>ワンチャンは璃れません。</p>
-        <p>大切にしてくれる家族を待っています。</p>
-        <p>お迎えしてもらった方に可愛がってもらえるように</p>
-        <p>私たちは日々仕事に取り組んでいます。</p>
+    <div class="p-message-mv__body l-inner--page">
+      <div class="p-message-mv__heading">
+        <?php get_template_part("template-parts/section-title", null, [
+          "main"  => "MESSAGE",
+          "sub"   => "メッセージ",
+          "align" => "left",
+          "tag"   => "h1",
+        ]); ?>
+      </div>
+      <div class="p-message-mv__inner-wrap">
+        <div class="p-message-mv__inner">
+          <figure class="p-message-mv__figure">
+            <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/message-mv.webp')); ?>" alt="" width="1264" height="710" />
+          </figure>
+          <div class="p-message-mv__text">
+            <p>ワンチャンは喋れません。</p>
+            <p>大切にしてくれる家族を待っています。</p>
+            <p>お迎えしてもらった方に可愛がってもらえるように</p>
+            <p>私たちは日々仕事に取り組んでいます。</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 
   <section class="p-message">
 
-    <div class="p-message__inner l-inner l-inner--wide">
+    <div class="p-message__inner l-inner--page">
       <div class="p-message__grid">
 
         <?php get_template_part("template-parts/message/message-card", null, [

@@ -15,7 +15,7 @@
           <li class="p-footer__nav-item"><a href="<?php page_path("news"); ?>">お知らせ</a></li>
           <li class="p-footer__nav-item"><a href="<?php page_path("service"); ?>">サービス</a></li>
           <li class="p-footer__nav-item"><a href="<?php page_path("voice"); ?>">お客様の声</a></li>
-          <li class="p-footer__nav-item"><a href="<?php page_path("contact"); ?>">contact</a></li>
+          <li class="p-footer__nav-item"><a href="<?php page_path("contact"); ?>">お問い合わせ</a></li>
         </ul>
       </nav>
     </div>
@@ -24,30 +24,20 @@
       <p class="p-footer__copyright">&copy; petlife.promenade</p>
       <ul class="p-footer__sns">
         <li class="p-footer__sns-item">
-          <a href="#" aria-label="X（旧Twitter）">
-            <img src="<?php echo esc_url(get_theme_file_uri("/assets/images/x.webp")); ?>" alt="X" width="50" height="50" loading="lazy" />
+          <a href="#" aria-label="LINE">
+            <img src="<?php echo esc_url(get_theme_file_uri("/assets/images/line.svg")); ?>" alt="LINE" width="50" height="50" loading="lazy" />
           </a>
         </li>
         <li class="p-footer__sns-item">
-          <a href="#" aria-label="YouTube">
-            <img src="<?php echo esc_url(get_theme_file_uri("/assets/images/youtube.webp")); ?>" alt="YouTube" width="50" height="50" loading="lazy" />
-          </a>
-        </li>
-        <li class="p-footer__sns-item">
-          <a href="#" aria-label="Threads">
-            <img src="<?php echo esc_url(get_theme_file_uri("/assets/images/threads.webp")); ?>" alt="Threads" width="50" height="50" loading="lazy" />
-          </a>
-        </li>
-        <li class="p-footer__sns-item">
-          <a href="#" aria-label="Instagram">
-            <img src="<?php echo esc_url(get_theme_file_uri("/assets/images/instagram.webp")); ?>" alt="Instagram" width="50" height="50" loading="lazy" />
+          <a href="https://www.instagram.com/petlife.promenade?igsh=MWNjZWY4YmN5NDJiMQ==" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+            <img src="<?php echo esc_url(get_theme_file_uri("/assets/images/instagram.svg")); ?>" alt="Instagram" width="50" height="50" loading="lazy" />
           </a>
         </li>
       </ul>
     </div>
     <!-- プライバシーポリシー -->
     <div class="p-footer__policy">
-      <a href="<?php page_path("privacy"); ?>" class="p-footer__policy-link">プライバシーポリシー</a>
+      <a href="<?php page_path("privacy-policy"); ?>" class="p-footer__policy-link">プライバシーポリシー</a>
       <p class="p-footer__policy-text">本ページは、中小企業庁「事業再生補助金」採択事業として実施しております。</p>
     </div>
   </div>

@@ -21,37 +21,30 @@ get_header(); ?>
        * <div class="p-contact-form__row">
        *   <div class="p-contact-form__label-wrap">
        *     <span class="p-contact-form__badge">必須</span>
-       *     <label class="p-contact-form__label">氏名</label>
+       *     <label class="p-contact-form__label" for="your-name">氏名</label>
        *   </div>
-       *   <div class="p-contact-form__field">[text* your-name]</div>
+       *   <div class="p-contact-form__field">[text* your-name id:your-name placeholder "例：山田 太郎"]</div>
        * </div>
        * <div class="p-contact-form__row">
        *   <div class="p-contact-form__label-wrap">
        *     <span class="p-contact-form__badge">必須</span>
-       *     <label class="p-contact-form__label">お問い合わせ種別</label>
+       *     <label class="p-contact-form__label" for="your-message">お問い合わせ内容</label>
        *   </div>
-       *   <div class="p-contact-form__field">[text* your-type]</div>
+       *   <div class="p-contact-form__field">[textarea* your-message id:your-message placeholder "お問い合わせ内容をご記入ください"]</div>
        * </div>
        * <div class="p-contact-form__row">
        *   <div class="p-contact-form__label-wrap">
        *     <span class="p-contact-form__badge">必須</span>
-       *     <label class="p-contact-form__label">お問い合わせ内容</label>
+       *     <label class="p-contact-form__label" for="your-email">メールアドレス</label>
        *   </div>
-       *   <div class="p-contact-form__field">[textarea* your-message]</div>
+       *   <div class="p-contact-form__field">[email* your-email id:your-email placeholder "例：example@example.com"]</div>
        * </div>
        * <div class="p-contact-form__row">
        *   <div class="p-contact-form__label-wrap">
        *     <span class="p-contact-form__badge">必須</span>
-       *     <label class="p-contact-form__label">メールアドレス</label>
+       *     <label class="p-contact-form__label" for="your-tel">電話番号</label>
        *   </div>
-       *   <div class="p-contact-form__field">[email* your-email]</div>
-       * </div>
-       * <div class="p-contact-form__row">
-       *   <div class="p-contact-form__label-wrap">
-       *     <span class="p-contact-form__badge">必須</span>
-       *     <label class="p-contact-form__label">電話番号</label>
-       *   </div>
-       *   <div class="p-contact-form__field">[tel* your-tel]</div>
+       *   <div class="p-contact-form__field">[tel* your-tel id:your-tel placeholder "例：090-1234-5678"]</div>
        * </div>
        * <div class="p-contact-form__submit">[submit "送信する"]</div>
        */

@@ -8,6 +8,12 @@
   }
 }
 
+.p-owner__inner {
+  max-width: calc(935px + 20px * 2);
+  padding-inline: 20px;
+  margin-inline: auto;
+}
+
 .p-owner__heading {
   text-align: center;
 }
@@ -17,6 +23,7 @@
   font-family: var(--mincho-font-family);;
   line-height: 1;
   color: var(--color-text);
+  font-weight: var(--fw-regular);
 
   @include mq("md") {
     font-size: calc(36 * var(--to-rem));
@@ -24,20 +31,19 @@
 }
 
 .p-owner__list {
-  display: flex;
-  justify-content: center;
-  gap: calc(24 * var(--to-rem));
-  margin-top: calc(28 * var(--to-rem));
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: calc(12 * var(--to-rem));
+  margin-block-start: calc(28 * var(--to-rem));
 
   @include mq("md") {
-    gap: calc(40 * var(--to-rem));
+    gap: calc(32 * var(--to-rem));
   }
 }
 
 .p-owner__image {
-  width: clamp(200px, 25vw, 291px);
+  position: relative;
   aspect-ratio: 291 / 359;
-  border-radius: 400px;
   overflow: hidden;
 }
 
@@ -47,7 +53,23 @@
   object-fit: cover;
 }
 
+.p-owner__sold {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 63%;
+  padding-block: 0.542em;
+  text-align: center;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  font-size:clamp(1rem, 0.824rem + 0.75vw, 1.5rem);
+  font-family: var(--sans-font-family);
+  line-height: 1;
+  z-index: 1;
+  font-weight: var(--fw-regular);
+}
+
 .p-owner__action {
-  margin-top: calc(40 * var(--to-rem));
+  margin-top: calc(66 * var(--to-rem));
   text-align: center;
 }

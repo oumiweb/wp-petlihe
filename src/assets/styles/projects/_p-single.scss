@@ -119,6 +119,7 @@
   overflow: hidden;
   margin-top: calc(32 * var(--to-rem));
   border-radius: 8px;
+  aspect-ratio: 938 / 462;
 
   @include mq(md) {
     margin-top: calc(48 * var(--to-rem));
@@ -128,7 +129,8 @@
 .p-single__thumbnail img {
   display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
   border-radius: 8px;
   object-fit: cover;
   transition: scale 0.3s ease;

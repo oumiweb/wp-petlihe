@@ -61,10 +61,14 @@
 // フィーチャードカード
 .p-search__featured {
   display: grid;
-  grid-template-columns: calc(503px + 20px * 2) 1fr;
+  grid-template-columns: 1fr;
   color: var(--color-white);
   overflow: hidden;
   background-image: linear-gradient(rgb(0 0 0 / 40%), rgb(0 0 0 / 40%)), url(/assets/images/bg.webp);
+
+  @include mq("md") {
+    grid-template-columns: clamp(200px, 45vw, calc(503px + 20px * 2)) 1fr;
+  }
 }
 
 .p-search__featured-image {
@@ -73,8 +77,8 @@
   align-items: center;
 
   img {
-    width: 503px;
-    height: 424px;
+    width: 100%;
+    aspect-ratio: 503 / 424;
     object-fit: cover;
   }
 }
@@ -139,13 +143,18 @@
 // ワンちゃんリスト
 .p-search__list {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: calc(97 * var(--to-rem));
+  grid-template-columns: 1fr;
+  gap: clamp(1.875rem, 0.401rem + 6.29vw, 6.063rem);
   list-style: none;
   margin-top: calc(64 * var(--to-rem));
   padding: 0;
 
-  @include mq("md"){ 
+  @include mq("sm") {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include mq("md") {
+    grid-template-columns: repeat(3, 1fr);
     margin-top: calc(203 * var(--to-rem));
   }
 }

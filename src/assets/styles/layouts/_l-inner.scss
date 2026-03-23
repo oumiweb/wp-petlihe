@@ -17,3 +17,15 @@
     padding-inline: var(--padding-inner-pc-wide);
   }
 }
+
+.l-inner--page {
+  max-width: calc(var(--inner-page) + var(--padding-inner) * 2);
+  padding-inline: var(--padding-inner);
+  margin-inline: auto;
+}
+
+.l-inner--news {
+  max-width: calc(var(--inner-news) + var(--padding-inner) * 2);
+  padding-inline: var(--padding-inner);
+  margin-inline: auto;
+}
