@@ -1,8 +1,16 @@
 @use "../global" as *;
 
 .p-search {
-  padding-block-start: calc(60 * var(--to-rem));
-  padding-block-end: calc(80 * var(--to-rem));
+  padding-bottom: calc(64 * var(--to-rem));
+
+  @include mq("md"){
+    padding-bottom: calc(143 * var(--to-rem));
+  
+  }
+}
+
+.p-search__body {
+  padding-block-start: calc(123 * var(--to-rem));
 }
 
 .p-search__inner {
@@ -11,7 +19,6 @@
   padding-inline: var(--padding-inner);
   display: flex;
   flex-direction: column;
-  gap: calc(40 * var(--to-rem));
 }
 
 // セクションタイトル（インナー幅の外）
@@ -19,7 +26,6 @@
   max-width: calc(var(--inner-wider) + var(--padding-inner) * 2);
   margin-inline: auto;
   padding-inline: var(--padding-inner);
-  margin-block-end: calc(40 * var(--to-rem));
 
   .c-section-title {
     width: 100%;
@@ -272,5 +278,5 @@
 .p-search__pagination {
   display: flex;
   justify-content: center;
-  margin-block-start: calc(16 * var(--to-rem));
+  margin-block-start: calc(69 * var(--to-rem));
 }

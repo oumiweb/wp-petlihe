@@ -19,6 +19,7 @@
   --inner-wider: 1264px;
   --inner-page: 1120px;
   --inner-news: 968px;
+  --inner-service: 1245px;
   --padding-inner: 20px;
   --padding-inner-pc: 242px;
   --padding-inner-pc-wide: 159px;
@@ -50,6 +51,7 @@
   --text-font-family: "Inter", sans-serif;
   --mincho-font-family: "Shippori Mincho", serif;
   --sans-font-family: "Noto Sans", sans-serif;
+  --afacad-font-family: "Afacad", sans-serif;
 
   // 16pxを基準として、1pxあたりのremを計算
   --to-rem: calc(tan(atan2(1px, var(--root-font-size))) * 1rem);

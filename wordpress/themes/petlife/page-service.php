@@ -6,7 +6,7 @@ get_header(); ?>
 
 <main class="l-main">
 
-  <div class="p-service-mv">
+  <div class="p-service l-page">
     <div class="p-service-mv__body l-inner--page">
 
       <!-- MV -->
@@ -22,11 +22,13 @@ get_header(); ?>
         <figure class="p-service-mv__figure">
           <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/service-mv.webp')); ?>" alt="" width="1264" height="710" />
         </figure>
+        <p class="p-service-mv__title">〜私たちは「母親」の気持ちで向き合う〜</p>
       </div>
 
+    </div>
+
       <!-- サービス -->
-      <section class="p-service-page">
-        <div class="p-service-page__inner">
+      <section class="p-service-page l-inner--service">
 
           <div class="p-service-page__text">
             <p>ワンちゃんの健康を願う</p>
@@ -82,6 +84,53 @@ get_header(); ?>
               <li>※ホテルご利用のお迎え時間は、18:30までとさせていただいております。</li>
               <li>※18:30を過ぎた場合は、1泊分のホテル料金が追加となります。</li>
             </ul>
+
+            <!-- オプション -->
+            <div class="p-service-page__option">
+              <h2 class="p-service-page__pricelist-title">Option</h2>
+              <table class="p-service-page__pricelist-table">
+                <tbody>
+                  <tr><td>お顔カット</td><td>¥660〜</td></tr>
+                  <tr><td>爪切り</td><td>¥660</td></tr>
+                  <tr><td>耳掃除毛抜き有り</td><td>¥880</td></tr>
+                  <tr><td>耳掃除</td><td>¥660</td></tr>
+                  <tr><td>毛玉取り・抜け毛</td><td>¥660〜</td></tr>
+                  <tr><td>肛門腺しぼり</td><td>¥880</td></tr>
+                  <tr><td>部分カット（お尻周り）</td><td>¥550</td></tr>
+                  <tr><td>部分カット（脚周り）</td><td>¥660〜</td></tr>
+                  <tr><td>部分カット（おひげ等）</td><td>¥660〜</td></tr>
+                  <tr><td>初回歯ブラシ代</td><td>¥530</td></tr>
+                  <tr><td>歯磨き</td><td>¥1,100</td></tr>
+                  <tr><td>脚先・脚裏バリカン</td><td>¥1,100</td></tr>
+                  <tr><td>脚裏バリカン</td><td>¥660</td></tr>
+                  <tr><td>オールシザー</td><td>¥2,200</td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <!-- ホテル -->
+            <div class="p-service-page__hotel">
+              <h2 class="p-service-page__pricelist-title">Hotel</h2>
+              <table class="p-service-page__pricelist-table">
+                <tbody>
+                  <tr><td>小型犬</td><td>¥5,500</td></tr>
+                  <tr><td>小型犬　ごはん1食</td><td>¥110</td></tr>
+                  <tr><td>中型犬</td><td>¥6,600</td></tr>
+                  <tr><td>中型犬　ごはん1食</td><td>¥220</td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <!-- ショートステイ -->
+            <div class="p-service-page__shortstay">
+              <h2 class="p-service-page__pricelist-title">Short stay</h2>
+              <table class="p-service-page__pricelist-table">
+                <tbody>
+                  <tr><td>小型犬（1時間）</td><td>¥880〜</td></tr>
+                  <tr><td>中型犬（1時間）</td><td>¥1,100〜</td></tr>
+                </tbody>
+              </table>
+            </div>
           </div>
 
           <!-- フード -->
@@ -166,15 +215,10 @@ get_header(); ?>
             </div>
 
           </div>
-        </div>
       </section>
-
-    </div>
-  </div>
 
   <!-- アクセス -->
   <section class="p-service-access">
-    <div class="p-service-access__inner l-inner">
       <div class="c-section-title" data-align="center">
         <h2 class="c-section-title__main">ACCESS</h2>
       </div>
@@ -190,8 +234,9 @@ get_header(); ?>
           title="店舗地図"
         ></iframe>
       </div>
-    </div>
   </section>
+
+  </div>
 
 </main>
 

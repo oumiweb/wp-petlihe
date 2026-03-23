@@ -4,7 +4,7 @@ Template Name: Contact
 */
 get_header(); ?>
 <main class="l-main">
-  <section class="p-contact">
+  <section class="p-contact l-page">
     <div class="p-contact__inner l-inner">
       <div class="p-contact__title">
         <?php get_template_part("template-parts/section-title", null, [

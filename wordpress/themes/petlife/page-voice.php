@@ -7,19 +7,22 @@ get_header(); ?>
 <main class="l-main">
 
   <!-- MV -->
-  <div class="p-voice-mv">
-    <div class="p-voice-mv__heading">
-      <?php get_template_part("template-parts/section-title", null, [
-        "main"  => "VOICE",
-        "sub"   => "お客様の声",
-        "align" => "left",
-        "tag"   => "h1",
-      ]); ?>
-    </div>
-    <div class="p-voice-mv__inner">
-      <figure class="p-voice-mv__figure">
-        <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/voice-mv.webp')); ?>" alt="" width="1264" height="710" />
-      </figure>
+  <div class="p-voice-mv l-page">
+    <div class="p-voice-mv__body l-inner--page">
+      <div class="p-voice-mv__heading">
+        <?php get_template_part("template-parts/section-title", null, [
+          "main"  => "VOICE",
+          "sub"   => "お客様の声",
+          "align" => "left",
+          "tag"   => "h1",
+        ]); ?>
+      </div>
+      <div class="p-voice-mv__inner">
+        <figure class="p-voice-mv__figure">
+          <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/voice-mv.webp')); ?>" alt="" width="1264" height="710" />
+        </figure>
+        <p class="p-voice-mv__title">お客様の声</p>
+      </div>
     </div>
   </div>
 

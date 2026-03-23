@@ -1,0 +1,9 @@
+@use "../global" as *;
+
+.l-page {
+
+   padding-top: calc(32 * var(--to-rem));
+  @include mq("md") {
+    padding-top: calc(88 * var(--to-rem));
+  }
+}

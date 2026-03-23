@@ -7,7 +7,7 @@ get_header(); ?>
 <main class="l-main">
 
   <!-- MV -->
-  <div class="p-message-mv">
+  <div class="p-message-mv l-page">
     <div class="p-message-mv__body l-inner--page">
       <div class="p-message-mv__heading">
         <?php get_template_part("template-parts/section-title", null, [
@@ -22,6 +22,7 @@ get_header(); ?>
           <figure class="p-message-mv__figure">
             <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/message-mv.webp')); ?>" alt="" width="1264" height="710" />
           </figure>
+          <p class="p-message-mv__title">メッセージ</p>
           <div class="p-message-mv__text">
             <p>ワンチャンは喋れません。</p>
             <p>大切にしてくれる家族を待っています。</p>

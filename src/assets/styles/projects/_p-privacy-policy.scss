@@ -1,0 +1,59 @@
+@use "../global" as *;
+
+.p-privacy-policy {
+  padding-bottom: calc(64 * var(--to-rem));
+
+  @include mq("md"){ 
+  padding-bottom: calc(150 * var(--to-rem));
+  }
+}
+
+.p-privacy-policy__content {
+  padding-top: calc(74 * var(--to-rem));
+
+  p {
+    font-size: calc(15 * var(--to-rem));
+  }
+
+  p:first-of-type {
+    padding-block-start: calc(17 * var(--to-rem));
+  }
+
+  h3 {
+    margin-block-start: calc(16 * var(--to-rem));
+  }
+}
+
+.p-privacy-policy__content-inner {
+  max-width: 856px;
+  margin-inline: auto;
+}
+
+.p-privacy-policy__content-title {
+  font-size: calc(24 * var(--to-rem));
+  line-height: 2;
+}
+
+.p-privacy-policy__contact {
+  max-width: 606px;
+  margin-inline: auto;
+  margin-block-start: calc(62 * var(--to-rem));
+  padding-block: calc(27 * var(--to-rem));
+  border: 1px solid var(--color-border);
+  background-color: var(--color-white);
+  text-align: center;
+
+  p {
+    font-size: calc(15 * var(--to-rem));
+  }
+}
+
+.p-privacy-policy__contact-title {
+  font-weight: var(--fw-bold);
+}
+
+.p-privacy-policy__contact a {
+  &:hover {
+    text-decoration: underline;
+  }
+}

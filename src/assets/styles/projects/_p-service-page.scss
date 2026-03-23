@@ -1,20 +1,41 @@
 @use "../global" as *;
 
+.p-service {
+  padding-bottom: calc(124 * var(--to-rem));
+
+  @include mq("md"){ 
+  padding-bottom: calc(267 * var(--to-rem));
+  }
+}
+
 .p-service-mv__body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: calc(64 * var(--to-rem));
-
-  @include mq("md") {
-    gap: calc(126 * var(--to-rem));
-  }
 }
 
 .p-service-mv__inner {
   position: relative;
   width: 100%;
   aspect-ratio: 1122 / 529;
+  margin-top: calc(32 * var(--to-rem));
+
+  @include mq("md"){ 
+    margin-top: calc(123 * var(--to-rem));
+  }
+}
+
+.p-service-mv__title {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-white);
+  font-size: clamp(1rem, 0.56rem + 1.88vw, 2.25rem);
+  font-family: var(--mincho-font-family);
+  font-weight: var(--fw-bold);
+  pointer-events: none;
 }
 
 .p-service-mv__figure {
@@ -30,29 +51,22 @@
 }
 
 .p-service-page {
-  padding-block: calc(32 * var(--to-rem)) calc(80 * var(--to-rem));
+  margin-top: calc(32 * var(--to-rem));
 
   @include mq("md") {
-    padding-block: calc(66 * var(--to-rem)) calc(120 * var(--to-rem));
-  }
-}
-
-.p-service-page__inner {
-  margin-block-start: calc(40 * var(--to-rem));
-
-  @include mq("md") {
-    margin-block-start: calc(60 * var(--to-rem));
+    margin-top: calc(66 * var(--to-rem));
   }
 }
 
 .p-service-page__text {
   text-align: center;
-  line-height: 2.4;
+  line-height: 2;
   font-size: calc(14 * var(--to-rem));
   color: var(--color-text);
 
   @include mq("md") {
     font-size: calc(16 * var(--to-rem));
+    line-height: 2.4;
   }
 
   p {
@@ -62,28 +76,27 @@
 
 .p-service-page__pricelist-notes {
   list-style: none;
-  margin: calc(16 * var(--to-rem)) 0 0;
+  margin: calc(40 * var(--to-rem)) 0 0;
   padding: 0;
   text-align: center;
 
   li {
-    font-size: calc(11 * var(--to-rem));
+    font-size: calc(14 * var(--to-rem));
     color: var(--color-text);
-    text-decoration: underline;
-    text-underline-offset: 3px;
     line-height: 2;
+    font-family: var(--mincho-font-family);
 
     @include mq("md") {
-      font-size: calc(12 * var(--to-rem));
+      font-size: calc(16 * var(--to-rem));
     }
   }
 }
 
 .p-service-page__food {
-  margin-block-start: calc(80 * var(--to-rem));
+  margin-block-start: calc(120 * var(--to-rem));
 
   @include mq("md") {
-    margin-block-start: calc(120 * var(--to-rem));
+    margin-block-start: calc(214 * var(--to-rem));
   }
 }
 
@@ -95,6 +108,8 @@
   font-size: calc(18 * var(--to-rem));
   font-weight: var(--fw-bold);
   color: var(--color-text);
+  line-height: 1.75;
+  font-family: var(--mincho-font-family);
 
   @include mq("md") {
     font-size: calc(24 * var(--to-rem));
@@ -102,14 +117,14 @@
 }
 
 .p-service-page__food-lead {
-  margin-block-start: calc(12 * var(--to-rem));
+  margin-block-start: calc(30 * var(--to-rem));
   font-size: calc(13 * var(--to-rem));
   color: var(--color-text);
   line-height: 1.8;
 }
 
 .p-service-page__food-figure {
-  margin: calc(40 * var(--to-rem)) auto 0;
+  margin: calc(30 * var(--to-rem)) auto 0;
   max-width: 600px;
 
   img {
@@ -120,7 +135,7 @@
 }
 
 .p-service-page__food-text {
-  margin-block-start: calc(48 * var(--to-rem));
+  margin-block-start: calc(61 * var(--to-rem));
   text-align: center;
   font-size: calc(13 * var(--to-rem));
   line-height: 2.4;
@@ -136,7 +151,7 @@
 }
 
 .p-service-page__food-cta {
-  margin-block-start: calc(40 * var(--to-rem));
+  margin-block-start: calc(60 * var(--to-rem));
   text-align: center;
 
   @include mq("md") {
@@ -145,7 +160,7 @@
 }
 
 .p-service-page__banner {
-  margin-block-start: calc(60 * var(--to-rem));
+  margin-block-start: calc(90 * var(--to-rem));
 
   @include mq("md") {
     margin-block-start: calc(80 * var(--to-rem));
@@ -159,41 +174,35 @@
 }
 
 .p-service-page__company {
-  margin-block-start: calc(60 * var(--to-rem));
+  margin-block-start: calc(64 * var(--to-rem));
 
   @include mq("md") {
-    margin-block-start: calc(80 * var(--to-rem));
+    margin-block-start: calc(129 * var(--to-rem));
   }
 }
 
 
 .p-service-page__company-table {
+  max-width: 510px;
+  margin-inline: auto;
   margin-block-start: calc(32 * var(--to-rem));
-  border: 2px solid #b0c4d8;
-  padding: calc(24 * var(--to-rem)) calc(24 * var(--to-rem));
+  border: 1px solid var(--color-white);
+  background-color: var(--color-footer-bg);
+  padding: calc(14 * var(--to-rem)) calc(24 * var(--to-rem));
 
   @include mq("md") {
-    padding: calc(40 * var(--to-rem)) calc(48 * var(--to-rem));
+    padding: calc(14 * var(--to-rem)) calc(48 * var(--to-rem));
   }
 }
 
 .p-service-page__company-row {
   display: grid;
-  grid-template-columns: calc(80 * var(--to-rem)) 1fr;
-  gap: calc(16 * var(--to-rem)) calc(32 * var(--to-rem));
-  padding-block: calc(16 * var(--to-rem));
-  font-size: calc(13 * var(--to-rem));
+  grid-template-columns: calc(112 * var(--to-rem)) 1fr;
+  font-size: calc(14 * var(--to-rem));
+  font-family: var(--afacad-font-family);
   color: var(--color-text);
-  line-height: 1.8;
-
-  @include mq("md") {
-    grid-template-columns: calc(120 * var(--to-rem)) 1fr;
-    font-size: calc(15 * var(--to-rem));
-  }
-
-  & + & {
-    border-block-start: 1px solid #dce8f0;
-  }
+  line-height: 2.4;
+  letter-spacing: 0.08em;
 
   dt {
     font-weight: var(--fw-bold);
@@ -202,6 +211,10 @@
 
   dd {
     margin: 0;
+  }
+
+  &:has(ul) {
+    line-height: 1.4;
   }
 
   ul {
@@ -216,21 +229,29 @@
 
   a {
     color: inherit;
+    text-decoration: underline;
     text-underline-offset: 3px;
+
+    @include mq("md") {
+      pointer-events: none;
+    }
   }
 }
 
 .p-service-access {
-  padding-block: calc(60 * var(--to-rem)) calc(80 * var(--to-rem));
+  padding-top: calc(64 * var(--to-rem));
+  padding-inline: var(--padding-inner);
 
   @include mq("md") {
-    padding-block: calc(80 * var(--to-rem)) calc(120 * var(--to-rem));
+    padding-top: calc(100 * var(--to-rem));
   }
 }
 
 
 .p-service-access__map {
   margin-block-start: calc(32 * var(--to-rem));
+  max-width: 781px;
+  margin-inline: auto;
 
   iframe {
     display: block;
@@ -240,6 +261,32 @@
     @include mq("md") {
       height: 450px;
     }
+  }
+}
+
+.p-service-page__option {
+  margin-block-start: calc(120 * var(--to-rem));
+  max-width: 828px;
+  margin-inline: auto;
+
+  @include mq("md"){
+    margin-block-start: calc(265 * var(--to-rem));
+  }
+
+  .p-service-page__pricelist-table td {
+    width: 50%;
+  }
+}
+
+.p-service-page__hotel,
+.p-service-page__shortstay {
+  padding-top: calc(120 * var(--to-rem));
+
+  @include mq("md"){ 
+    padding-top: calc(178 * var(--to-rem));
+  }
+  .p-service-page__pricelist-table td {
+    width: 50%;
   }
 }
 
@@ -266,13 +313,14 @@
 
 .p-service-page__pricelist-table {
   width: 100%;
-  border-collapse: collapse;
-  font-size: calc(12 * var(--to-rem));
+  table-layout: fixed;
+  border-collapse: separate;
+  border-spacing: calc(6 * var(--to-rem)) calc(6 * var(--to-rem));
+  font-size: clamp(0.875rem, 0.824rem + 0.75vw, 1.5rem);
   color: var(--color-text);
-
-  @include mq("md") {
-    font-size: calc(14 * var(--to-rem));
-  }
+  font-family: var(--mincho-font-family);
+  line-height: 1.75;
+  font-weight: var(--fw-regular);
 
   thead tr {
     background-color: var(--color-primary);
@@ -289,14 +337,15 @@
   td {
     padding: calc(10 * var(--to-rem)) calc(16 * var(--to-rem));
     text-align: center;
-    border-block-end: 1px solid oklch(from var(--color-black) l c h / 10%);
+    border-block-end: 1px solid #342F2F;
   }
 
+  th:first-child,
   td:first-child {
-    border-inline-end: 1px solid oklch(from var(--color-black) l c h / 10%);
-  }
+    width: 40%;
 
-  tbody tr:last-child td {
-    border-block-end: none;
+    @include mq("md") {
+      width: auto;
+    }
   }
 }
