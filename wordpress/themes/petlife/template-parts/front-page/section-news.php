@@ -22,7 +22,12 @@ $news_posts = get_posts([
           <li class="p-news__item">
             <a href="<?php the_permalink(); ?>" class="p-news__link">
               <time class="p-news__date" datetime="<?php echo get_the_date('Y-m-d'); ?>"><?php echo get_the_date('Y.m.d'); ?></time>
-              <span class="p-news__category"><?php echo esc_html(get_the_category_list('', '', $post->ID) ? strip_tags(get_the_category_list()) : ''); ?></span>
+              <?php
+                $cats = get_the_category($post->ID);
+                if ($cats) :
+              ?>
+                <span class="p-news__category"><?php echo esc_html($cats[0]->name); ?></span>
+              <?php endif; ?>
               <span class="p-news__title"><?php the_title(); ?></span>
             </a>
           </li>

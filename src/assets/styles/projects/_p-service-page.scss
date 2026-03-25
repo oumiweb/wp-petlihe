@@ -328,21 +328,31 @@
   }
 
   th {
-    padding: calc(12 * var(--to-rem)) calc(16 * var(--to-rem));
+    padding: calc(12 * var(--to-rem)) calc(4 * var(--to-rem));
+    font-size: calc(11 * var(--to-rem));
     font-weight: var(--fw-regular);
     text-align: center;
     border: 1px solid var(--color-primary);
+
+    @include mq("md") {
+      padding: calc(12 * var(--to-rem)) calc(16 * var(--to-rem));
+      font-size: inherit;
+    }
   }
 
   td {
-    padding: calc(10 * var(--to-rem)) calc(16 * var(--to-rem));
+    padding: calc(5 * var(--to-rem)) calc(5 * var(--to-rem));
     text-align: center;
-    border-block-end: 1px solid #342F2F;
+    border-block-end: 1px solid var(--color-dark);
+
+    @include mq("md"){ 
+      padding: calc(10 * var(--to-rem)) calc(16 * var(--to-rem));
+    }
   }
 
   th:first-child,
   td:first-child {
-    width: 40%;
+    width: 50%;
 
     @include mq("md") {
       width: auto;

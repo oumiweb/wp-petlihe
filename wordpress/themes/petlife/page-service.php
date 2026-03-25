@@ -56,26 +56,26 @@ get_header(); ?>
               <tbody>
                 <tr><td>チワワ（スムース）</td><td>¥4,950</td><td></td></tr>
                 <tr><td>チワワ（ロング）</td><td>¥5,200</td><td>¥7,700</td></tr>
-                <tr><td>M・ダックス（スムース）</td><td>¥4,950</td><td></td></tr>
-                <tr><td>M・ダックス（ロング）</td><td>¥6,050</td><td>¥7,700</td></tr>
-                <tr><td>ミニチュアピンシャー</td><td>¥5,000</td><td></td></tr>
+                <tr><td>M・ダックス<span data-only-device="sm"><br></span>（スムース）</td><td>¥4,950</td><td></td></tr>
+                <tr><td>M・ダックス<span data-only-device="sm"><br></span>（ロング）</td><td>¥6,050</td><td>¥7,700</td></tr>
+                <tr><td>ミニチュア<span data-only-device="sm"><br></span>ピンシャー</td><td>¥5,000</td><td></td></tr>
                 <tr><td>パグ</td><td>¥6,930</td><td></td></tr>
-                <tr><td>フレンチブルドッグ</td><td>¥7,150</td><td></td></tr>
+                <tr><td>フレンチ<span data-only-device="sm"><br></span>ブルドッグ</td><td>¥7,150</td><td></td></tr>
                 <tr><td>マルチーズ</td><td>¥5,500</td><td>¥8,800</td></tr>
                 <tr><td>ペキニーズ</td><td>¥6,600</td><td>¥8,800</td></tr>
                 <tr><td>ポメラニアン</td><td>¥6,600</td><td>¥8,800</td></tr>
                 <tr><td>パピヨン</td><td>¥6,050</td><td>¥8,250</td></tr>
-                <tr><td>トイプードル（3kg以下）</td><td>¥6,600</td><td>¥9,350</td></tr>
-                <tr><td>トイプードル（5kg以下）</td><td>¥7,040</td><td>¥9,900</td></tr>
-                <tr><td>トイプードル（5kg以上）</td><td>¥7,480</td><td>¥10,450</td></tr>
+                <tr><td>トイプードル<span data-only-device="sm"><br></span>（3kg以下）</td><td>¥6,600</td><td>¥9,350</td></tr>
+                <tr><td>トイプードル<span data-only-device="sm"><br></span>（5kg以下）</td><td>¥7,040</td><td>¥9,900</td></tr>
+                <tr><td>トイプードル<span data-only-device="sm"><br></span>（5kg以上）</td><td>¥7,480</td><td>¥10,450</td></tr>
                 <tr><td>キャバリア</td><td>¥7,150</td><td>¥9,900</td></tr>
                 <tr><td>ヨークシャテリア</td><td>¥5,500</td><td>¥8,800</td></tr>
                 <tr><td>シーズー</td><td>¥6,600</td><td>¥8,800</td></tr>
                 <tr><td>Mシュナウザー</td><td>¥7,700</td><td>¥10,450</td></tr>
                 <tr><td>柴犬（豆柴）</td><td>¥7,150</td><td>¥9,350</td></tr>
                 <tr><td>ビジョンフリーゼ</td><td>¥8,800</td><td>¥14,300</td></tr>
-                <tr><td>アメリカンコッカー</td><td>¥7,700</td><td>¥10,450</td></tr>
-                <tr><td>ウェルシュコーギー</td><td>¥7,700</td><td></td></tr>
+                <tr><td>アメリカン<span data-only-device="sm"><br></span>コッカー</td><td>¥7,700</td><td>¥10,450</td></tr>
+                <tr><td>ウェルシュ<span data-only-device="sm"><br></span>コーギー</td><td>¥7,700</td><td></td></tr>
                 <tr><td>MIX</td><td>要相談</td><td>要相談</td></tr>
               </tbody>
             </table>
@@ -96,9 +96,9 @@ get_header(); ?>
                   <tr><td>耳掃除</td><td>¥660</td></tr>
                   <tr><td>毛玉取り・抜け毛</td><td>¥660〜</td></tr>
                   <tr><td>肛門腺しぼり</td><td>¥880</td></tr>
-                  <tr><td>部分カット（お尻周り）</td><td>¥550</td></tr>
-                  <tr><td>部分カット（脚周り）</td><td>¥660〜</td></tr>
-                  <tr><td>部分カット（おひげ等）</td><td>¥660〜</td></tr>
+                  <tr><td>部分カット<span data-only-device="sm"><br></span>（お尻周り）</td><td>¥550</td></tr>
+                  <tr><td>部分カット<span data-only-device="sm"><br></span>（脚周り）</td><td>¥660〜</td></tr>
+                  <tr><td>部分カット<span data-only-device="sm"><br></span>（おひげ等）</td><td>¥660〜</td></tr>
                   <tr><td>初回歯ブラシ代</td><td>¥530</td></tr>
                   <tr><td>歯磨き</td><td>¥1,100</td></tr>
                   <tr><td>脚先・脚裏バリカン</td><td>¥1,100</td></tr>
