@@ -25,7 +25,7 @@ $info      = get_field('dog_info', $post_id);
     </div>
     <dl class="p-search__card-meta">
       <div class="p-search__card-meta-row">
-        <dt>犬種</dt>
+        <dt>種類</dt>
         <dd><?php echo esc_html($breed); ?></dd>
       </div>
       <div class="p-search__card-meta-row">

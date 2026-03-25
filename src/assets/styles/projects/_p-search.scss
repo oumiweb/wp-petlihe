@@ -11,6 +11,7 @@
 
 .p-search__body {
   padding-block-start: calc(123 * var(--to-rem));
+  font-family: var(--text-font-family);
 }
 
 .p-search__inner {
@@ -61,7 +62,7 @@
 .p-search__search-note {
   font-size: calc(16 * var(--to-rem));
   color: var(--color-text);
-  font-family: var(--title-font-family);
+  font-family: var(--text-font-family);
 }
 
 // フィーチャードカード
@@ -70,10 +71,13 @@
   grid-template-columns: 1fr;
   color: var(--color-white);
   overflow: hidden;
-  background-image: linear-gradient(rgb(0 0 0 / 40%), rgb(0 0 0 / 40%)), url(/assets/images/bg.webp);
+  border-radius: 8px;
+  background-image: linear-gradient(rgb(0 0 0 / 50%), rgb(0 0 0 / 50%)), url(/assets/images/featured-img.webp);
+  border: 1px solid #ededed;
 
   @include mq("md") {
     grid-template-columns: clamp(200px, 45vw, calc(503px + 20px * 2)) 1fr;
+    margin-top:calc(136 * var(--to-rem));
   }
 }
 
@@ -109,23 +113,32 @@
   flex-direction: column;
   gap: calc(4 * var(--to-rem));
   width: 100%;
+  text-align: left;
+}
+
+.p-search__featured-group {
+  display: flex;
+  flex-direction: column;
+  gap: calc(16 * var(--to-rem));
+  width: fit-content;
+  margin-inline: auto;
 }
 
 .p-search__featured-meta-row {
   display: flex;
   align-items: center;
   gap: calc(24 * var(--to-rem));
-  font-size: calc(14 * var(--to-rem));
+  font-size: calc(16 * var(--to-rem));
   padding-block: calc(8 * var(--to-rem));
-  border-block-end: 1px solid rgb(255 255 255 / 15%);
+  font-weight: var(--fw-regular);
 
   dt {
-    background-color: rgb(255 255 255 / 15%);
-    color: var(--color-white);
-    padding: calc(4 * var(--to-rem)) calc(10 * var(--to-rem));
+    background-color: var(--color-tag-bg);
+    color: var(--color-dark);
+    padding: calc(10 * var(--to-rem)) calc(40 * var(--to-rem));
     min-width: 4em;
     text-align: center;
-    font-size: calc(12 * var(--to-rem));
+    font-weight: var(--fw-regular);
   }
 
   dd {
@@ -142,7 +155,9 @@
   display: flex;
   flex-direction: column;
   gap: calc(4 * var(--to-rem));
-  font-size: calc(13 * var(--to-rem));
+  font-size: calc(16 * var(--to-rem));
+  line-height: 1.5;
+  text-align: left;
   color: oklch(from var(--color-white) l c h / 70%);
 }
 
@@ -240,6 +255,9 @@
     padding-block: calc(4 * var(--to-rem));
     padding-inline: 0;
     font-size: calc(16 * var(--to-rem));
+    background-color: var(--color-dark);
+    border-color: var(--color-dark);
+    color: var(--color-white);
   }
 }
 
@@ -279,4 +297,9 @@
   display: flex;
   justify-content: center;
   margin-block-start: calc(69 * var(--to-rem));
+
+  .c-pagination {
+    --_pagination-active-bg: var(--color-dark);
+    --_pagination-border: var(--color-dark);
+  }
 }

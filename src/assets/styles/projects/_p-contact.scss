@@ -1,7 +1,13 @@
 @use "../global" as *;
 
 .p-contact {
-  padding-block: calc(72 * var(--to-rem)) calc(100 * var(--to-rem));
+  padding-block: calc(88 * var(--to-rem)) calc(181 * var(--to-rem));
+}
+
+.p-contact__inner {
+  max-width: calc(910px + 20px * 2);
+  padding-inline: 20px;
+  margin-inline: auto;
 }
 
 .p-contact__title {
@@ -83,6 +89,60 @@
 .p-contact-form__textarea {
   min-height: calc(160 * var(--to-rem));
   resize: vertical;
+}
+
+.p-contact-form__privacy-wrap {
+  margin-block-start: calc(113 * var(--to-rem));
+  display: flex;
+  justify-content: center;
+  margin-inline: calc( 29 * var(--to-rem));
+}
+
+.p-contact-form__privacy {
+  padding: calc(24 * var(--to-rem));
+  display: flex;
+  flex-direction: column;
+  gap: calc(16 * var(--to-rem));
+}
+
+.p-contact-form__privacy-title {
+  font-size: calc(24 * var(--to-rem));
+  font-weight: var(--fw-bold);
+  color: var(--color-text);
+  margin: 0;
+  line-height: 2;
+}
+
+.p-contact-form__privacy-text {
+  font-size: calc(15 * var(--to-rem));
+  line-height: 2;
+  color: var(--color-text);
+  margin: 0;
+}
+
+.p-contact-form__privacy-link {
+  border-bottom: 1px solid;
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+.p-contact-form__privacy-check {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: calc(8 * var(--to-rem));
+  font-size: calc(14 * var(--to-rem));
+  color: var(--color-text);
+  cursor: pointer;
+  margin-top:calc(40 * var(--to-rem));
+
+  input[type="checkbox"] {
+    width: calc(40 * var(--to-rem));
+    height: calc(40 * var(--to-rem));
+    flex-shrink: 0;
+    cursor: pointer;
+  }
 }
 
 .p-contact-form__submit {

@@ -25,6 +25,7 @@ const imageConfig = {
 
 const inputsForWordPress = {
   style: resolve(root, "assets", "styles", "style.scss"),
+  "editor-style": resolve(root, "assets", "styles", "editor-style.scss"),
   ...Object.fromEntries(
     globSync("src/assets/js/*.js")
       .filter(file => !basename(file).startsWith("_"))

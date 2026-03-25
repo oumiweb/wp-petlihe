@@ -80,8 +80,8 @@ get_header(); ?>
               </tbody>
             </table>
             <ul class="p-service-page__pricelist-notes">
-              <li>※トリミングご利用の時間は、10:00から15:00までとさせていただいております。</li>
-              <li>※ホテルご利用のお迎え時間は、18:30までとさせていただいております。</li>
+              <li>※トリミングご利用の時間は、<span data-only-device="sm"><br></span>10:00から15:00までとさせていただいております。</li>
+              <li>※ホテルご利用のお迎え時間は、<span data-only-device="sm"><br></span>18:30までとさせていただいております。</li>
               <li>※18:30を過ぎた場合は、1泊分のホテル料金が追加となります。</li>
             </ul>
 
@@ -164,12 +164,14 @@ get_header(); ?>
             </div>
 
             <div class="p-service-page__food-cta">
-              <a href="#" class="c-button" data-color="primary">お買い物はこちら</a>
+              <a href="https://shop.petlife-promenade.com/#about" class="c-button" data-color="primary" target="_blank" rel="noopener noreferrer">お買い物はこちら</a>
             </div>
 
             <!-- フードバナー -->
             <div class="p-service-page__banner">
-              <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/banner-food.webp')); ?>" alt="ワンちゃんの健康を第一に考えました。安心無添加フード" width="1122" height="320" loading="lazy" />
+              <a href="https://shop.petlife-promenade.com/#about" target="_blank" rel="noopener noreferrer">
+                <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/banner-food.webp')); ?>" alt="ワンちゃんの健康を第一に考えました。安心無添加フード" width="1122" height="320" loading="lazy" />
+              </a>
             </div>
 
             <!-- 会社情報 -->

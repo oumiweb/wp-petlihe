@@ -73,6 +73,9 @@ function enqueue_editor_style_dev()
   if (isset($dev_manifest["inputs"]["style"])) {
     add_editor_style($baseUrl . $dev_manifest["inputs"]["style"]);
   }
+  if (isset($dev_manifest["inputs"]["editor-style"])) {
+    add_editor_style($baseUrl . $dev_manifest["inputs"]["editor-style"]);
+  }
 }
 
 /**
@@ -90,6 +93,12 @@ function enqueue_editor_style_from_manifest()
     $style_path = get_template_directory_uri() . "/" . $style_entry["file"];
     add_editor_style($style_path);
   }
+
+  $editor_style_entry = $build_manifest["assets/styles/editor-style.scss"] ?? null;
+  if ($editor_style_entry && isset($editor_style_entry["file"])) {
+    $editor_style_path = get_template_directory_uri() . "/" . $editor_style_entry["file"];
+    add_editor_style($editor_style_path);
+  }
 }
 
 /**
@@ -106,6 +115,15 @@ function enqueue_editor_style_fallback()
     add_editor_style($style_path . "?ver=" . $version);
   } else {
     add_editor_style($style_path);
+  }
+
+  $editor_style_path = get_template_directory_uri() . "/assets/styles/editor-style.css";
+  $editor_style_file = get_template_directory() . "/assets/styles/editor-style.css";
+  $editor_version = get_file_version($editor_style_file);
+  if ($editor_version !== null) {
+    add_editor_style($editor_style_path . "?ver=" . $editor_version);
+  } else {
+    add_editor_style($editor_style_path);
   }
 }
 

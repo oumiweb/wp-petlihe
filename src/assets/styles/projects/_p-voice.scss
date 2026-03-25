@@ -14,7 +14,11 @@
 .p-voice-mv__inner {
   position: relative;
   width: 100%;
-  aspect-ratio: 1122 / 529;
+  aspect-ratio: 4 / 3;
+
+  @include mq("md") {
+    aspect-ratio: 1122 / 529;
+  }
 }
 
 .p-voice-mv__title {
@@ -52,11 +56,17 @@
   }
 }
 
+.p-voice-list__inner {
+  max-width: calc(903 * var(--to-rem));
+  margin-inline: auto;
+  padding-inline: var(--padding-inner);
+}
+
 .p-voice-list__grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: calc(24 * var(--to-rem));
-  margin-inline: calc(108 * var(--to-rem));
+  margin-inline: 0;
 
   @include mq("md") {
     grid-template-columns: repeat(2, 1fr);
@@ -68,9 +78,11 @@
 
 .p-voice-card {
   background: #fff;
+  border: 1px solid var(--color-dark);
   border-radius: calc(8 * var(--to-rem));
   box-shadow: 0 2px 16px rgb(0 0 0 / 0.08);
-  padding: calc(32 * var(--to-rem)) calc(24 * var(--to-rem));
+  padding-inline: calc(33 * var(--to-rem));
+  padding-block: calc(56 * var(--to-rem)) calc(48 * var(--to-rem));
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -97,10 +109,13 @@
 }
 
 .p-voice-card__name {
-  font-size: calc(15 * var(--to-rem));
+  font-size: calc(32 * var(--to-rem));
   font-weight: var(--fw-bold);
   color: var(--color-text);
   margin: 0;
+  line-height: 1.3;
+  padding-block:calc(39 * var(--to-rem));
+  font-family: var(--mincho-font-family);
 }
 
 .p-voice-card__breed {
@@ -109,13 +124,11 @@
 }
 
 .p-voice-card__divider {
-  margin-block-start: calc(12 * var(--to-rem));
   border: none;
-  border-block-start: 1px solid #ddd;
+  margin: 0;
 }
 
 .p-voice-card__text {
-  margin-block-start: calc(12 * var(--to-rem));
   font-size: calc(13 * var(--to-rem));
   line-height: 2;
   color: var(--color-text);

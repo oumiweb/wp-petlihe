@@ -5,7 +5,7 @@ Template Name: Contact
 get_header(); ?>
 <main class="l-main">
   <section class="p-contact l-page">
-    <div class="p-contact__inner l-inner">
+    <div class="p-contact__inner">
       <div class="p-contact__title">
         <?php get_template_part("template-parts/section-title", null, [
           "main" => "CONTACT",
@@ -46,6 +46,13 @@ get_header(); ?>
        *   </div>
        *   <div class="p-contact-form__field">[tel* your-tel id:your-tel placeholder "例：090-1234-5678"]</div>
        * </div>
+       * <div class="p-contact-form__privacy-wrap">
+       *   <div class="p-contact-form__privacy">
+       *     <h3 class="p-contact-form__privacy-title">個人情報の取り扱いに関して</h3>
+       *     <p class="p-contact-form__privacy-text">ご入力いただいた情報は、弊社が別途定める目的の範囲内で利用いたします。<br>個人情報のお取り扱いに関する詳細は弊社<a href="/privacy-policy/" class="p-contact-form__privacy-link">プライバシーポリシー</a>をご確認のうえ、「個人情報の取り扱いについて同意する」にチェックいただき、「送信する」ボタンを押してください。</p>
+       *     <label class="p-contact-form__privacy-check">[acceptance acceptance] 個人情報の取り扱いについて同意する</label>
+       *   </div>
+       * </div>
        * <div class="p-contact-form__submit">[submit "送信する"]</div>
        */
       ?>
@@ -55,4 +62,9 @@ get_header(); ?>
     </div>
   </section>
 </main>
+<script>
+  document.addEventListener('wpcf7mailsent', function () {
+    window.location.href = '<?php echo esc_url(home_url('/contact-thanks/')); ?>';
+  });
+</script>
 <?php get_footer(); ?>

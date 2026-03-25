@@ -24,7 +24,7 @@
       <p class="p-footer__copyright">&copy; petlife.promenade</p>
       <ul class="p-footer__sns">
         <li class="p-footer__sns-item">
-          <a href="#" aria-label="LINE">
+          <a href="https://line.me/R/ti/p/@200eafbw?oat_content=url&ts=12241531" aria-label="LINE" target="_blank" rel="noopener noreferrer">
             <img src="<?php echo esc_url(get_theme_file_uri("/assets/images/line.svg")); ?>" alt="LINE" width="50" height="50" loading="lazy" />
           </a>
         </li>

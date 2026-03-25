@@ -40,10 +40,11 @@
 
 .p-welcome__grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 4px;
 
-  @include mq("md") {
+  @include mq(md) {
+    grid-template-columns: repeat(3, 1fr);
     gap: 8px;
   }
 }
@@ -69,7 +70,11 @@
 }
 
 .p-welcom__notes {
-  text-align: center;
+  text-align: start;
   margin-top: calc(32 * var(--to-rem));
   color: var(--color-text);
+
+  @include mq("md"){ 
+  text-align: center;
+  }
 }

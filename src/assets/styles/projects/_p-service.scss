@@ -37,11 +37,19 @@
 
 .p-service__list {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr;
   gap: calc(20 * var(--to-rem));
   list-style: none;
   margin: 0;
   padding: 0;
+
+  @include mq(sm) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include mq(md) {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .p-service__item {

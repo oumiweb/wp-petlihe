@@ -50,3 +50,14 @@ function enable_post_archive_with_slug($args, $post_type)
   return $args;
 }
 add_filter("register_post_type_args", "enable_post_archive_with_slug", 10, 2);
+
+/**
+ * ニュース一覧の表示件数を5件に設定
+ */
+function news_posts_per_page($query)
+{
+  if (!is_admin() && $query->is_main_query() && $query->is_home()) {
+    $query->set("posts_per_page", 5);
+  }
+}
+add_action("pre_get_posts", "news_posts_per_page");

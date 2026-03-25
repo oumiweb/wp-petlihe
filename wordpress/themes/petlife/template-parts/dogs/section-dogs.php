@@ -29,25 +29,27 @@ $first_id = get_the_ID();
     <img data-featured-img src="<?php echo esc_url($img_url); ?>" alt="" width="503" height="424" />
   </div>
   <div class="p-search__featured-body">
-    <dl class="p-search__featured-meta">
-      <div class="p-search__featured-meta-row">
-        <dt>犬種</dt>
-        <dd data-featured-breed><?php echo esc_html(get_field('dog_breed')); ?></dd>
-      </div>
-      <div class="p-search__featured-meta-row">
-        <dt>性別</dt>
-        <dd data-featured-gender><?php echo esc_html(get_field('dog_gender')); ?></dd>
-      </div>
-    </dl>
-    <ul class="p-search__featured-info" data-featured-info>
-      <?php
-      $info = get_field('dog_info');
-      if ($info) :
-        foreach (explode(',', $info) as $item) : ?>
-          <li><?php echo esc_html(trim($item)); ?></li>
-        <?php endforeach;
-      endif; ?>
-    </ul>
+    <div class="p-search__featured-group">
+      <dl class="p-search__featured-meta">
+        <div class="p-search__featured-meta-row">
+          <dt>種類</dt>
+          <dd data-featured-breed><?php echo esc_html(get_field('dog_breed')); ?></dd>
+        </div>
+        <div class="p-search__featured-meta-row">
+          <dt>性別</dt>
+          <dd data-featured-gender><?php echo esc_html(get_field('dog_gender')); ?></dd>
+        </div>
+      </dl>
+      <ul class="p-search__featured-info" data-featured-info>
+        <?php
+        $info = get_field('dog_info');
+        if ($info) :
+          foreach (explode(',', $info) as $item) : ?>
+            <li><?php echo esc_html(trim($item)); ?></li>
+          <?php endforeach;
+        endif; ?>
+      </ul>
+    </div>
   </div>
 </div>
 

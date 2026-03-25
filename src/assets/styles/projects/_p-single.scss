@@ -1,7 +1,7 @@
 @use "../global" as *;
 
 .p-single {
-  padding-block: calc(40 * var(--to-rem));
+  padding-block: calc(32 * var(--to-rem));
 
   @include mq(md) {
     padding-block: calc(80 * var(--to-rem));
@@ -13,10 +13,10 @@
 }
 
 .p-single__header {
-  margin-top: calc(32 * var(--to-rem));
+  margin-top: calc(120 * var(--to-rem));
 
   @include mq(md) {
-    margin-top: calc(48 * var(--to-rem));
+    margin-top: calc(298 * var(--to-rem));
   }
 }
 
@@ -34,14 +34,14 @@
 
 .p-single__title {
   margin-top: calc(16 * var(--to-rem));
-  color: var(--color-text);
+  color: var(--color-primary);
   font-size: calc(24 * var(--to-rem));
   font-weight: var(--fw-bold);
   line-height: 1.6;
 
   @include mq(md) {
     margin-top: calc(24 * var(--to-rem));
-    font-size: calc(32 * var(--to-rem));
+    font-size: calc(40 * var(--to-rem));
   }
 }
 
@@ -102,8 +102,8 @@
   padding-block: calc(4 * var(--to-rem));
   padding-inline: calc(12 * var(--to-rem));
   border-radius: 4px;
-  background-color: var(--color-gray);
-  color: var(--color-primary);
+  background-color: var(--color-primary);
+  color: var(--color-white);
   font-size: calc(12 * var(--to-rem));
   text-decoration: none;
   transition: opacity var(--duration);
@@ -188,13 +188,12 @@
   }
 }
 
-.p-single__content h2,
-.p-single h2 {
+.p-single__content h2 {
   margin-top: calc(40 * var(--to-rem));
   padding-block-start: calc(16 * var(--to-rem));
   padding-inline-start: calc(16 * var(--to-rem));
   border-inline-start: calc(4 * var(--to-rem)) solid var(--color-accent);
-  color: var(--color-text);
+  color: var(--color-primary);
   font-size: calc(24 * var(--to-rem));
   font-weight: var(--fw-bold);
   line-height: 1.6;

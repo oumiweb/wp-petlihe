@@ -26,7 +26,7 @@ if (featured) {
 
       featuredInfo.innerHTML = info.map((i) => `<li>${i}</li>`).join("");
 
-      const offset = 80;
+      const offset = 100;
       const top = featured.getBoundingClientRect().top + window.scrollY - offset;
       window.scrollTo({ top, behavior: "smooth" });
     });

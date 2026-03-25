@@ -22,7 +22,11 @@
 .p-message-mv__inner {
   position: relative;
   width: 100%;
-  aspect-ratio: 1122 / 529;
+  aspect-ratio: 4 / 3;
+
+  @include mq("md") {
+    aspect-ratio: 1122 / 529;
+  }
 }
 
 .p-message-mv__title {
@@ -55,10 +59,9 @@
   bottom: calc(32 * var(--to-rem));
   left: calc(32 * var(--to-rem));
   color: var(--color-white);
-  font-size: calc(15 * var(--to-rem));
+  font-size: calc(14 * var(--to-rem));
   line-height: 1.8;
   font-family: var(--mincho-font-family);
-
 
   @include mq("md") {
     bottom: calc(48 * var(--to-rem));
@@ -121,7 +124,7 @@
   font-size: calc(48 * var(--to-rem));
   font-family: var(--mincho-font-family);
   font-weight: var(--fw-regular);
-  color: var(--color-gray);
+  color: var(--color-dark);
 }
 
 .p-message-card__heading {
@@ -150,7 +153,6 @@
 .p-message-card__figure {
   flex-shrink: 0;
   order: -1;
-  margin-right: 69px;
   width: clamp(280px, 28vw, 368px);
   aspect-ratio: 1;
   border-radius: 50%;
@@ -159,6 +161,7 @@
 
   @include mq("md") {
     order: 0;
+    margin-right: 69px;
     align-self: flex-start;
   }
 }

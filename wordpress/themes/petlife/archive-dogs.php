@@ -6,10 +6,10 @@
 get_header(); ?>
 
 <main class="l-main">
-  <section class="p-search">
+  <section class="p-search l-page">
 
     <!-- セクションタイトル -->
-    <div class="p-search__heading">
+    <div class="p-search__heading l-inner--page">
       <?php get_template_part("template-parts/section-title", null, [
         "main"  => "SEARCH",
         "sub"   => "探す",
@@ -18,14 +18,16 @@ get_header(); ?>
       ]); ?>
     </div>
 
-    <div class="p-search__inner">
-      <!-- 検索見出し -->
-      <div class="p-search__search-heading">
-        <h2 class="p-search__search-title">ワンちゃんを探す</h2>
-        <p class="p-search__search-note">※価格については店頭スタッフにお尋ねください</p>
-      </div>
+    <div class="p-search__body">
+      <div class="p-search__inner">
+        <!-- 検索見出し -->
+        <div class="p-search__search-heading">
+          <h2 class="p-search__search-title">ワンちゃんを探す</h2>
+          <p class="p-search__search-note">※価格については店頭スタッフにお尋ねください</p>
+        </div>
 
-      <?php get_template_part("template-parts/dogs/section-dogs"); ?>
+        <?php get_template_part("template-parts/dogs/section-dogs"); ?>
+      </div>
     </div>
 
   </section>
