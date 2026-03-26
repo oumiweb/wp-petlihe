@@ -10,6 +10,14 @@ $welcome_dogs = new WP_Query([
   'post_status'    => 'publish',
   'orderby'        => 'date',
   'order'          => 'DESC',
+  'tax_query'      => [
+    [
+      'taxonomy' => 'dog_status',
+      'field'    => 'slug',
+      'terms'    => 'decided',
+      'operator' => 'NOT IN',
+    ],
+  ],
 ]);
 ?>
 <section class="p-welcome">

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /**
  * editor-style.scss
  * Gutenbergエディター専用スタイル
@@ -5,7 +6,6 @@
  * WordPressは :root のCSS変数を .editor-styles-wrapper にスコープするため、
  * このファイルで変数を再定義し、テキストカラーなどを正しく上書きする
  */
-
 .editor-styles-wrapper {
   /* CSS変数の再定義 */
   --color-white: #fff;
@@ -19,8 +19,8 @@
   --fw-bold: 700;
   --base-font-family: "Local Noto Sans JP", "Noto Sans JP", sans-serif;
   --title-font-family: "Libre Baskerville", sans-serif;
-
   /* ベーススタイル */
+  color: #423232 !important;
   font-family: "Local Noto Sans JP", "Noto Sans JP", sans-serif;
   font-weight: 400;
 }

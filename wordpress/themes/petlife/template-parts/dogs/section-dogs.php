@@ -8,6 +8,14 @@ $dogs_query = new WP_Query([
   'post_type'      => 'dogs',
   'posts_per_page' => 6,
   'paged'          => get_query_var('paged', 1),
+  'tax_query'      => [
+    [
+      'taxonomy' => 'dog_status',
+      'field'    => 'slug',
+      'terms'    => 'decided',
+      'operator' => 'NOT IN',
+    ],
+  ],
 ]);
 
 if (!$dogs_query->have_posts()) : ?>
@@ -41,13 +49,9 @@ $first_id = get_the_ID();
         </div>
       </dl>
       <ul class="p-search__featured-info" data-featured-info>
-        <?php
-        $info = get_field('dog_info');
-        if ($info) :
-          foreach (explode(',', $info) as $item) : ?>
-            <li><?php echo esc_html(trim($item)); ?></li>
-          <?php endforeach;
-        endif; ?>
+        <?php $color = get_field('dog_color'); if ($color) : ?><li><?php echo esc_html($color); ?></li><?php endif; ?>
+        <?php $birthday = get_field('dog_birthday'); if ($birthday) : ?><li><?php echo esc_html($birthday); ?>生まれ</li><?php endif; ?>
+        <?php $birthplace = get_field('dog_birthplace'); if ($birthplace) : ?><li><?php echo esc_html($birthplace); ?>出身</li><?php endif; ?>
       </ul>
     </div>
   </div>
@@ -75,7 +79,7 @@ $first_id = get_the_ID();
 <!-- ページネーション -->
 <?php if ($dogs_query->max_num_pages > 1) : ?>
   <div class="p-search__pagination">
-    <?php get_template_part("template-parts/pagination"); ?>
+    <?php get_template_part("template-parts/pagination", null, ['total' => $dogs_query->max_num_pages]); ?>
   </div>
 <?php endif; ?>
 

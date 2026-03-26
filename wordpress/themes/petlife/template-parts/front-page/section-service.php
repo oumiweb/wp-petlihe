@@ -13,7 +13,7 @@
     </div>
     <ul class="p-service__list">
       <li class="p-service__item">
-        <a href="<?php echo esc_url(home_url('/service/')); ?>" class="p-service__link">
+        <a href="https://shop.petlife-promenade.com/#about" class="p-service__link" target="_blank" rel="noopener noreferrer">
           <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/top-service01.webp')); ?>" alt="" class="p-service__image" width="400" height="533" loading="lazy" />
           <div class="p-service__content">
             <p class="p-service__en">Shop</p>
@@ -22,7 +22,7 @@
         </a>
       </li>
       <li class="p-service__item">
-        <a href="<?php echo esc_url(home_url('/service/')); ?>" class="p-service__link">
+        <a href="<?php echo esc_url(home_url('/service/#trimming')); ?>" class="p-service__link">
           <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/top-service02.webp')); ?>" alt="" class="p-service__image" width="546" height="410" loading="lazy" />
           <div class="p-service__content">
             <p class="p-service__en">Trimming</p>
@@ -31,7 +31,7 @@
         </a>
       </li>
       <li class="p-service__item">
-        <a href="<?php echo esc_url(home_url('/service/')); ?>" class="p-service__link">
+        <a href="<?php echo esc_url(home_url('/service/#food')); ?>" class="p-service__link">
           <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/top-service03.webp')); ?>" alt="" class="p-service__image" width="546" height="410" loading="lazy" />
           <div class="p-service__content">
             <p class="p-service__en">Food</p>

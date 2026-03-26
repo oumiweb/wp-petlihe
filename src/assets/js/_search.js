@@ -15,16 +15,23 @@ if (featured) {
       });
       card.closest(".p-search__item").classList.add("is-active");
 
-      const img    = card.dataset.img;
-      const breed  = card.dataset.breed;
-      const gender = card.dataset.gender;
-      const info   = card.dataset.info ? card.dataset.info.split(",") : [];
+      const img        = card.dataset.img;
+      const breed      = card.dataset.breed;
+      const gender     = card.dataset.gender;
+      const color      = card.dataset.color;
+      const birthday   = card.dataset.birthday;
+      const birthplace = card.dataset.birthplace;
 
       if (img)    featuredImg.src = img;
       if (breed)  featuredBreed.textContent  = breed;
       if (gender) featuredGender.textContent = gender;
 
-      featuredInfo.innerHTML = info.map((i) => `<li>${i}</li>`).join("");
+      const infoItems = [
+        color      ? color                : "",
+        birthday   ? birthday + "生まれ"  : "",
+        birthplace ? birthplace + "出身"  : "",
+      ].filter(Boolean);
+      featuredInfo.innerHTML = infoItems.map((i) => `<li>${i}</li>`).join("");
 
       const offset = 100;
       const top = featured.getBoundingClientRect().top + window.scrollY - offset;

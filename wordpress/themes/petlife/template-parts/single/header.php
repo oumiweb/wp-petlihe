@@ -51,11 +51,6 @@ $display_author = $author_info ? $author_info : get_the_author();
       <?php echo esc_html($display_date_formatted); ?>
     </time>
 
-    <?php if ($display_author): ?>
-      <span class="p-single__author" itemprop="author" itemscope itemtype="https://schema.org/Person">
-        <span itemprop="name"><?php echo esc_html($display_author); ?></span>
-      </span>
-    <?php endif; ?>
 
     <?php if (!empty($categories)): ?>
       <div class="p-single__categories">

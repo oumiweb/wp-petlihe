@@ -24,7 +24,7 @@ $category_name = !empty($categories) ? $categories[0]->name : "";
           <?php
             $excerpt = wp_strip_all_tags(get_the_excerpt());
             if ($excerpt):
-              $excerpt = mb_strimwidth($excerpt, 0, 70, '…');
+              $excerpt = mb_strimwidth($excerpt, 0, 120, '…');
           ?>
             <p class="p-news-list__excerpt"><?php echo esc_html($excerpt); ?></p>
           <?php endif; ?>

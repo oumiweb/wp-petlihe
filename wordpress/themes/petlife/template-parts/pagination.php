@@ -13,9 +13,10 @@ global $wp_query;
 
 // 配列でリンクを取得（prev_text / next_text は表示文言）
 $pagination = paginate_links([
-  "type" => "array",
+  "type"      => "array",
   "prev_text" => "←",
   "next_text" => "→",
+  "total"     => $args['total'] ?? $wp_query->max_num_pages,
 ]);
 
 if (!$pagination || empty($pagination)) {

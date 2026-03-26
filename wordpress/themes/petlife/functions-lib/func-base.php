@@ -87,8 +87,7 @@ function enqueue_editor_style_from_manifest()
 
   $editor_style_entry = $build_manifest["assets/styles/editor-style.scss"] ?? null;
   if ($editor_style_entry && isset($editor_style_entry["file"])) {
-    $editor_style_path = get_template_directory_uri() . "/" . $editor_style_entry["file"];
-    add_editor_style($editor_style_path);
+    add_editor_style($editor_style_entry["file"]);
   }
 }
 
@@ -98,24 +97,7 @@ function enqueue_editor_style_from_manifest()
  */
 function enqueue_editor_style_fallback()
 {
-  $style_path = get_template_directory_uri() . "/assets/styles/style.css";
-  $style_file = get_template_directory() . "/assets/styles/style.css";
-  $version = get_file_version($style_file);
-  // add_editor_style()はバージョンパラメータをサポートしていないため、URLに直接追加
-  if ($version !== null) {
-    add_editor_style($style_path . "?ver=" . $version);
-  } else {
-    add_editor_style($style_path);
-  }
-
-  $editor_style_path = get_template_directory_uri() . "/assets/styles/editor-style.css";
-  $editor_style_file = get_template_directory() . "/assets/styles/editor-style.css";
-  $editor_version = get_file_version($editor_style_file);
-  if ($editor_version !== null) {
-    add_editor_style($editor_style_path . "?ver=" . $editor_version);
-  } else {
-    add_editor_style($editor_style_path);
-  }
+  add_editor_style("assets/styles/editor-style.css");
 }
 
 // カスタムページにbodyクラスを追加（汎用化）
