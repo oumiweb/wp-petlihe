@@ -180,6 +180,22 @@
   }
 
   .wpcf7-submit {
+    padding: calc(14 * var(--to-rem)) calc(60 * var(--to-rem));
+    border-color: var(--color-primary);
+    background-color: var(--color-primary);
+    color: #fff;
     cursor: pointer;
+  }
+
+  .wpcf7-not-valid-tip {
+    display: block;
+    margin-block-start: calc(6 * var(--to-rem));
+    font-size: calc(12 * var(--to-rem));
+    color: #e00;
+  }
+
+  .wpcf7-form-control.wpcf7-not-valid {
+    border-color: #e00;
+    background-color: #fff0f0;
   }
 }

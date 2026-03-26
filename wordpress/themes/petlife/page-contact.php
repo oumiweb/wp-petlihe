@@ -53,11 +53,11 @@ get_header(); ?>
        *     <label class="p-contact-form__privacy-check">[acceptance acceptance] 個人情報の取り扱いについて同意する</label>
        *   </div>
        * </div>
-       * <div class="p-contact-form__submit">[submit "送信する"]</div>
+       * <div class="p-contact-form__submit">[submit class:c-button "送信する"]</div>
        */
       ?>
       <div class="p-contact__form">
-        <?php echo do_shortcode('[contact-form-7 id="c86f2bc" title="Contact form 1"]'); ?>
+        <?php echo do_shortcode('[contact-form-7 id="3c4473f" title="Contact form 1"]'); ?>
       </div>
     </div>
   </section>

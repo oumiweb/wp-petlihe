@@ -70,9 +70,6 @@ function enqueue_editor_style_dev()
   }
 
   $baseUrl = $dev_manifest["url"];
-  if (isset($dev_manifest["inputs"]["style"])) {
-    add_editor_style($baseUrl . $dev_manifest["inputs"]["style"]);
-  }
   if (isset($dev_manifest["inputs"]["editor-style"])) {
     add_editor_style($baseUrl . $dev_manifest["inputs"]["editor-style"]);
   }
@@ -86,12 +83,6 @@ function enqueue_editor_style_from_manifest()
   $build_manifest = get_build_manifest();
   if ($build_manifest === false) {
     return;
-  }
-
-  $style_entry = $build_manifest["assets/styles/style.scss"] ?? null;
-  if ($style_entry && isset($style_entry["file"])) {
-    $style_path = get_template_directory_uri() . "/" . $style_entry["file"];
-    add_editor_style($style_path);
   }
 
   $editor_style_entry = $build_manifest["assets/styles/editor-style.scss"] ?? null;
