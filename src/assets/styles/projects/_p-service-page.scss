@@ -4,7 +4,7 @@
   padding-bottom: calc(124 * var(--to-rem));
 
   @include mq("md"){ 
-  padding-bottom: calc(267 * var(--to-rem));
+  padding-bottom: calc(214 * var(--to-rem));
   }
 }
 
@@ -94,6 +94,16 @@
   }
 }
 
+.p-service-page__pricelist-note {
+  margin-block-start: calc(16 * var(--to-rem));
+  text-align: center;
+  font-size: calc(20 * var(--to-rem));
+  font-weight: 700;
+  line-height: 1.6;
+  color: var(--color-text);
+  font-family: var(--mincho-font-family);
+}
+
 .p-service-page__food {
   margin-block-start: calc(120 * var(--to-rem));
 
@@ -107,6 +117,7 @@
 }
 
 .p-service-page__food-title {
+  scroll-margin-top: var(--header-height);
   font-size: calc(18 * var(--to-rem));
   font-weight: var(--fw-bold);
   color: var(--color-text);
@@ -177,10 +188,21 @@
     margin-block-start: calc(80 * var(--to-rem));
   }
 
+  a {
+    display: block;
+    transition: transform 0.3s ease;
+  }
+
   img {
     display: block;
     width: 100%;
     height: auto;
+  }
+}
+
+@media (any-hover: hover) {
+  .p-service-page__banner a:hover {
+    transform: translateY(-6px);
   }
 }
 
@@ -310,6 +332,7 @@
 }
 
 .p-service-page__pricelist-title {
+  scroll-margin-top: var(--header-height);
   font-size: calc(24 * var(--to-rem));
   line-height: 1.1;
   font-weight: var(--fw-regular);

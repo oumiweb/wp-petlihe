@@ -2,7 +2,7 @@
   <div class="p-header__inner">
     <p class="p-header__logo">
       <a href="<?php echo esc_url(home_url("/")); ?>">
-        <img src="<?php echo esc_url(get_theme_file_uri("/assets/images/logo.svg")); ?>" alt="<?php bloginfo('name'); ?>" width="178" height="72" />
+        <img src="<?php echo esc_url(get_theme_file_uri("/assets/images/logo-white.webp")); ?>" alt="<?php bloginfo('name'); ?>" width="178" height="72" />
       </a>
     </p>
     <nav class="p-header__nav">
@@ -38,7 +38,7 @@
   </div>
   <div id="drawer-menu" class="p-header__drawer js-drawer" aria-hidden="true">
     <p class="p-header__drawer-logo">
-      <img src="<?php echo esc_url(get_theme_file_uri("/assets/images/logo.svg")); ?>" alt="<?php bloginfo('name'); ?>" width="178" height="72" />
+      <img src="<?php echo esc_url(get_theme_file_uri("/assets/images/logo-white.webp")); ?>" alt="<?php bloginfo('name'); ?>" width="178" height="72" />
     </p>
     <div class="p-header__drawer-inner">
       <nav class="p-header__drawer-nav">
@@ -66,14 +66,6 @@
           </li>
         </ul>
       </nav>
-      <div class="p-header__drawer-sns">
-        <a href="https://line.me/R/ti/p/@200eafbw?oat_content=url&ts=12241531" class="p-header__drawer-sns-item" aria-label="LINE" target="_blank" rel="noopener noreferrer">
-          <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/line.svg')); ?>" alt="LINE" width="44" height="44" />
-        </a>
-        <a href="https://www.instagram.com/petlife.promenade?igsh=MWNjZWY4YmN5NDJiMQ==" class="p-header__drawer-sns-item" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
-          <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/instagram.svg')); ?>" alt="Instagram" width="44" height="44" />
-        </a>
-      </div>
     </div>
   </div>
 </header>

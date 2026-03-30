@@ -36,6 +36,7 @@
   --color-primary: #1eafaa;
   --color-hover: #24c4be;
   --color-dark: #342F2F;
+  --color-dark2: #5b5555;
   --color-header-bg: #21B0AB;
   --color-footer-bg: #D9D9D9;
   --color-tag-bg: #F8F8F8;
@@ -65,4 +66,11 @@
 
   /* header height */
   --header-height: 72px;
+}
+
+// 1440px以上で全体スケール（値を変えて調整可能）
+@media screen and (min-width: 1440px) {
+  html {
+    zoom: 1.2;
+  }
 }

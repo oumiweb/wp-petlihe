@@ -22,7 +22,7 @@ get_header(); ?>
         <figure class="p-service-mv__figure">
           <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/service-mv.webp')); ?>" alt="" width="1264" height="710" />
         </figure>
-        <p class="p-service-mv__title">〜私たちは「母親」の気持ちで向き合う〜</p>
+        <p class="p-service-mv__title">「家族として迎え入れたその先の暮らし」</p>
       </div>
 
     </div>
@@ -44,7 +44,7 @@ get_header(); ?>
           </div>
 
           <div class="p-service-page__pricelist">
-            <h2 class="p-service-page__pricelist-title">Trimming Price</h2>
+            <h2 class="p-service-page__pricelist-title" id="trimming">Trimming Price</h2>
             <table class="p-service-page__pricelist-table">
               <thead>
                 <tr>
@@ -84,6 +84,7 @@ get_header(); ?>
               <li>※ホテルご利用のお迎え時間は、<span data-only-device="sm"><br></span>18:30までとさせていただいております。</li>
               <li>※18:30を過ぎた場合は、1泊分のホテル料金が追加となります。</li>
             </ul>
+            <p class="p-service-page__pricelist-note">※シャンプーコース・カットコースには、爪切り・耳掃除・肛門腺絞り・脚先脚裏バリカンが含まれております。</p>
 
             <!-- オプション -->
             <div class="p-service-page__option">
@@ -136,7 +137,7 @@ get_header(); ?>
           <!-- フード -->
           <div class="p-service-page__food">
             <div class="p-service-page__food-heading">
-              <h2 class="p-service-page__food-title">愛情から生まれる手作りフード</h2>
+              <h2 class="p-service-page__food-title" id="food">愛情から生まれる手作りフード</h2>
               <p class="p-service-page__food-lead">ペットライフプロムナードでは近内ファクトリーで無添加のオリジナルフードを丁寧に手づくりし、店内で販売しています</p>
             </div>
 
@@ -190,7 +191,7 @@ get_header(); ?>
                 </div>
                 <div class="p-service-page__company-row">
                   <dt>所在地</dt>
-                  <dd>〒810-0005 福岡市中央区清川3-16-13 1F</dd>
+                  <dd>〒810-0005 福岡県福岡市中央区清川3-16-13アスピーテ渡辺通1F</dd>
                 </div>
                 <div class="p-service-page__company-row">
                   <dt>TEL</dt>

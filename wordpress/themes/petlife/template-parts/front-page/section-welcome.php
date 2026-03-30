@@ -34,7 +34,7 @@ $welcome_dogs = new WP_Query([
             $img_url = $image ? $image['url'] : get_template_directory_uri() . '/assets/images/search-card-comingsoon.webp';
             $img_alt = $image ? $image['alt'] : get_the_title();
           ?>
-          <li class="p-welcome__grid-item">
+          <li class="p-welcome__grid-item js-fade">
             <img src="<?php echo esc_url($img_url); ?>" alt="<?php echo esc_attr($img_alt); ?>" width="551" height="446" loading="lazy" />
           </li>
         <?php endwhile; ?>

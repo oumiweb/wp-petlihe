@@ -113,7 +113,11 @@
 .p-footer__copyright {
   color: var(--color-white);
   font-size: calc(11 * var(--to-rem));
-  align-self: flex-start;
+  align-self: center;
+
+  @include mq(md) {
+    align-self: flex-start;
+  }
 }
 
 .p-footer__sns {

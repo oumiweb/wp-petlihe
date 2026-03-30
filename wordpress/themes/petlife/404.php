@@ -9,7 +9,7 @@
       <div class="p-error__content">
         <p><?php esc_html_e("申し訳ございませんが、お探しのページは見つかりませんでした。URLをご確認いただくか、トップページから再度お探しください。", "wp-template"); ?></p>
         <p>
-          <a href="<?php echo esc_url(home_url("/")); ?>" class="c-button" data-color="black"><?php esc_html_e("トップページへ戻る", "wp-template"); ?></a>
+          <a href="<?php echo esc_url(home_url("/")); ?>" class="c-button" data-color="header"><?php esc_html_e("トップページへ戻る", "wp-template"); ?></a>
         </p>
       </div>
     </div>

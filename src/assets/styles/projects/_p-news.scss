@@ -53,6 +53,7 @@
   display: grid;
   grid-template-columns: auto auto;
   grid-template-rows: auto auto;
+  justify-content: start;
   gap: calc(8 * var(--to-rem)) calc(12 * var(--to-rem));
   align-items: center;
   padding-block: calc(20 * var(--to-rem));

@@ -30,6 +30,7 @@ get_header(); ?>
             <figure class="p-news-list__mv-figure">
               <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/news-mv.webp')); ?>" alt="" width="1122" height="500" />
             </figure>
+            <p class="p-news-list__mv-title">ニュース</p>
           </div>
 
           <div class="p-news-list__banner">

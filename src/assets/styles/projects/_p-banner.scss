@@ -1,17 +1,14 @@
 @use "../global" as *;
 
-.p-banner {
-  margin-block-start: 0;
-
-  @include mq("md"){ 
-  margin-block-start: calc(214 * var(--to-rem));
-  }
-}
-
 .p-banner__inner {
   max-width: calc(var(--inner-wider) + var(--padding-inner) * 2);
   margin-inline: auto;
   padding-inline: var(--padding-inner);
+}
+
+.p-banner__inner a {
+  display: block;
+  transition: transform 0.3s ease;
 }
 
 .p-banner__inner img {
@@ -20,4 +17,10 @@
   height: auto;
   aspect-ratio: 1200 / 427;
   object-fit: cover;
+}
+
+@media (any-hover: hover) {
+  .p-banner__inner a:hover {
+    transform: translateY(-6px);
+  }
 }

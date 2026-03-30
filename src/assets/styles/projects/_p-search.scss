@@ -230,6 +230,7 @@
 
 .p-search__card-meta-row {
   display: flex;
+  align-items: center;
   gap: calc(60 * var(--to-rem));
   font-size: calc(16 * var(--to-rem));
 
@@ -243,6 +244,7 @@
   dd {
     margin: 0;
     text-align: left;
+    align-self: center;
   }
 }
 

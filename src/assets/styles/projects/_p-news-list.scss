@@ -84,7 +84,7 @@
   align-items: center;
   gap: calc(20 * var(--to-rem));
   padding: calc(40 * var(--to-rem));
-  background-color: var(--color-primary);
+  background-color: var(--color-dark2);
   outline: 1px solid var(--color-white);
   outline-offset: calc(-20 * var(--to-rem));
 
@@ -155,7 +155,6 @@
 .p-news-list__thumbnail {
   flex-shrink: 0;
   width: calc(100 * var(--to-rem));
-  height: calc(100 * var(--to-rem));
   background-color: var(--color-gray);
   overflow: hidden;
 
@@ -167,7 +166,6 @@
 
   @include mq("md") {
     width: calc(184 * var(--to-rem));
-    height: calc(184 * var(--to-rem));
   }
 }
 

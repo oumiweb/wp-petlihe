@@ -15,7 +15,7 @@ get_header(); ?>
       </div>
       <p class="p-contact__complete-text">担当者より、通常2営業日以内にご連絡いたします。</p>
       <div class="p-contact__complete-button">
-        <a href="<?php echo esc_url(home_url('/')); ?>" class="c-button" data-color="primary">TOPへ</a>
+        <a href="<?php echo esc_url(home_url('/')); ?>" class="c-button" data-color="header">TOPへ</a>
       </div>
     </div>
   </section>

@@ -56,12 +56,9 @@
   object-fit: cover;
 }
 
+
 .p-welcome__grid-item:nth-child(n+4):nth-child(-n+6) img {
   filter: blur(5px);
-}
-
-.p-welcome__grid-item:nth-child(n+7) img {
-  filter: blur(10px);
 }
 
 .p-welcome__action {

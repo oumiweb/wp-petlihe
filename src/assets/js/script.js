@@ -1,4 +1,5 @@
 // リセットCSS（kiso.css）は style.scss で読み込み。二重読み込みを避けるためここでは import しない
+import "./_fade.js";
 import "./_contact.js";
 import "./_drawer.js";
 import "./_mv-slider.js";

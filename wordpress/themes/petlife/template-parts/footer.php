@@ -4,7 +4,7 @@
     <div class="p-footer__main">
       <p class="p-footer__logo">
         <a href="<?php echo esc_url(home_url("/")); ?>">
-          <img src="<?php echo esc_url(get_theme_file_uri("/assets/images/logo.svg")); ?>" alt="<?php bloginfo('name'); ?>" width="160" height="40" />
+          <img src="<?php echo esc_url(get_theme_file_uri("/assets/images/logo-white.webp")); ?>" alt="<?php bloginfo('name'); ?>" width="160" height="40" />
         </a>
       </p>
       <nav class="p-footer__nav">
@@ -22,18 +22,6 @@
     <!-- コピーライト＋SNS -->
     <div class="p-footer__bottom">
       <p class="p-footer__copyright">&copy; petlife.promenade</p>
-      <ul class="p-footer__sns">
-        <li class="p-footer__sns-item">
-          <a href="https://line.me/R/ti/p/@200eafbw?oat_content=url&ts=12241531" aria-label="LINE" target="_blank" rel="noopener noreferrer">
-            <img src="<?php echo esc_url(get_theme_file_uri("/assets/images/line.svg")); ?>" alt="LINE" width="50" height="50" loading="lazy" />
-          </a>
-        </li>
-        <li class="p-footer__sns-item">
-          <a href="https://www.instagram.com/petlife.promenade?igsh=MWNjZWY4YmN5NDJiMQ==" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
-            <img src="<?php echo esc_url(get_theme_file_uri("/assets/images/instagram.svg")); ?>" alt="Instagram" width="50" height="50" loading="lazy" />
-          </a>
-        </li>
-      </ul>
     </div>
     <!-- プライバシーポリシー -->
     <div class="p-footer__policy">

@@ -55,7 +55,7 @@
           <ul class="p-welcome__grid">
             {{! ACF: have_rows('welcome_images') / the_sub_field('image') }}
             {{#each page.welcomeImages}}
-            <li class="p-welcome__grid-item">
+            <li class="p-welcome__grid-item js-fade">
               <img src="{{this.src}}" alt="" width="551" height="446" loading="lazy" />
             </li>
             {{/each}}
@@ -69,37 +69,6 @@
         </div>
       </section>
 
-      <!-- 店長コメント -->
-      <section class="p-owner">
-        <div class="p-owner__inner l-inner">
-          <div class="p-owner__heading">
-            <h2 class="p-owner__title">家族が見つかったワンちゃん</h2>
-          </div>
-          <ul class="p-owner__list">
-            <li class="p-owner__item">
-              <div class="p-owner__image">
-                <span class="p-owner__sold">SOLD</span>
-                <img src="/assets/images/dog01.webp" alt="" width="291" height="359" loading="lazy" />
-              </div>
-            </li>
-            <li class="p-owner__item">
-              <div class="p-owner__image">
-                <span class="p-owner__sold">SOLD</span>
-                <img src="/assets/images/dog01.webp" alt="" width="291" height="359" loading="lazy" />
-              </div>
-            </li>
-            <li class="p-owner__item">
-              <div class="p-owner__image">
-                <span class="p-owner__sold">SOLD</span>
-                <img src="/assets/images/dog01.webp" alt="" width="291" height="359" loading="lazy" />
-              </div>
-            </li>
-          </ul>
-          <div class="p-owner__action">
-            <a href="/dogs/" class="c-button" data-color="primary">その他のワンちゃんはこちら</a>
-          </div>
-        </div>
-      </section>
 
       <!-- サービス -->
       <section class="p-service">
@@ -113,7 +82,7 @@
           <ul class="p-service__list">
             <li class="p-service__item">
               <a href="https://shop.petlife-promenade.com/#about" class="p-service__link" target="_blank" rel="noopener noreferrer">
-                <img src="/assets/images/top-service01.webp" alt="" class="p-service__image" width="400" height="533" loading="lazy" />
+                <img src="/assets/images/shop-img.webp" alt="" class="p-service__image" width="400" height="533" loading="lazy" />
                 <div class="p-service__content">
                   <p class="p-service__en">Shop</p>
                   <p class="p-service__ja">サービス<span class="c-deco-line c-deco-line--sm" aria-hidden="true"></span></p>
@@ -122,7 +91,7 @@
             </li>
             <li class="p-service__item">
               <a href="/service/#trimming" class="p-service__link">
-                <img src="/assets/images/top-service02.webp" alt="" class="p-service__image" width="546" height="410" loading="lazy" />
+                <img src="/assets/images/trimming.webp" alt="" class="p-service__image" width="546" height="410" loading="lazy" />
                 <div class="p-service__content">
                   <p class="p-service__en">Trimming</p>
                   <p class="p-service__ja">トリミング<span class="c-deco-line c-deco-line--sm" aria-hidden="true"></span></p>
@@ -145,7 +114,22 @@
       <!-- バナー -->
       <section class="p-banner">
         <div class="p-banner__inner">
-          <img src="/assets/images/bunner.webp" alt="" width="1200" height="427" loading="lazy" />
+          <a href="https://shop.petlife-promenade.com/#about" target="_blank" rel="noopener noreferrer">
+            <img src="/assets/images/bunner.webp" alt="" width="1200" height="427" loading="lazy" />
+          </a>
+        </div>
+      </section>
+
+      <!-- LINKS -->
+      <section class="p-links">
+        <div class="p-links__inner l-inner">
+          <div class="p-links__heading">
+            <h2 class="p-links__title">LINKS</h2>
+            <p class="p-links__subtitle">各種サイトはこちら<span class="c-deco-line" aria-hidden="true"></span></p>
+          </div>
+          <div class="p-links__body">
+            <img src="/assets/images/links-qr.webp" alt="Instagram / LINE / オンラインショップ QRコード" width="710" height="228" loading="lazy" />
+          </div>
         </div>
       </section>
 

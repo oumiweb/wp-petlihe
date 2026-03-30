@@ -95,7 +95,11 @@
   margin-block-start: calc(113 * var(--to-rem));
   display: flex;
   justify-content: center;
-  margin-inline: calc( 29 * var(--to-rem));
+  margin-inline: 0;
+
+  @include mq("md"){ 
+    margin-inline: calc( 29 * var(--to-rem));
+  }
 }
 
 .p-contact-form__privacy {
@@ -132,7 +136,8 @@
   align-items: center;
   justify-content: center;
   gap: calc(8 * var(--to-rem));
-  font-size: calc(14 * var(--to-rem));
+  font-size: calc(15 * var(--to-rem));
+  line-height: 2;
   color: var(--color-text);
   cursor: pointer;
   margin-top:calc(40 * var(--to-rem));

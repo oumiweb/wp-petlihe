@@ -14,7 +14,7 @@ $img     = $args['img']     ?? '';
   <p class="p-message-card__role"><?php echo esc_html($role); ?></p>
   <div class="p-message-card__content">
     <div class="p-message-card__body">
-      <h2 class="p-message-card__heading"><?php echo nl2br(esc_html($heading)); ?></h2>
+      <h2 class="p-message-card__heading"><?php echo wp_kses($heading, ['span' => ['data-only-device' => []], 'br' => []]); ?></h2>
       <div class="p-message-card__text">
         <?php echo wp_kses_post($text); ?>
       </div>
