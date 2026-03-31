@@ -165,12 +165,12 @@ get_header(); ?>
             </div>
 
             <div class="p-service-page__food-cta">
-              <a href="https://shop.petlife-promenade.com/#about" class="c-button" data-color="primary" target="_blank" rel="noopener noreferrer">お買い物はこちら</a>
+              <a href="https://xs783086.xsrv.jp/wp-test-promenade/shop/#about" class="c-button" data-color="primary" target="_blank" rel="noopener noreferrer">お買い物はこちら</a>
             </div>
 
             <!-- フードバナー -->
             <div class="p-service-page__banner">
-              <a href="https://shop.petlife-promenade.com/#about" target="_blank" rel="noopener noreferrer">
+              <a href="https://xs783086.xsrv.jp/wp-test-promenade/shop/#about" target="_blank" rel="noopener noreferrer">
                 <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/banner-food.webp')); ?>" alt="ワンちゃんの健康を第一に考えました。安心無添加フード" width="1122" height="320" loading="lazy" />
               </a>
             </div>
